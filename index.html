@@ -48,9 +48,30 @@
             border-radius: 5px;
             font-weight: bold;
             margin: 10px 0;
+            cursor: pointer;
         }
         .button:hover {
             background-color: #00205b;
+        }
+        .projects-section {
+            display: none;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #003087;
+            margin-top: 10px;
+        }
+        .project-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .project-button:hover {
+            background-color: #218838;
         }
         a {
             color: #003087;
@@ -75,7 +96,15 @@
         <div class="section">
             <h2>Willkommen bei Ficken Und Bahn!</h2>
             <p>Ficken Und Bahn ist eine leidenschaftliche Organisation, die die Welt des Sports durch Fußball und Wrestling bereichert. Wir fördern Talente, organisieren Events und bringen Gemeinschaften zusammen, um den Spirit des Sports zu leben.</p>
-            <a href="projects.html" class="button">Erfahre über unsere Projekte</a>
+            <button class="button" onclick="toggleProjects()">Erfahre über unsere Projekte</button>
+            <div id="projects-section" class="projects-section">
+                <h3>Unsere Projekte</h3>
+                <p>Entdecke unsere aktuellen Initiativen:</p>
+                <ul>
+                    <li><strong>Kölner Drachen e.V.</strong> - Ein dynamischer Fußballverein, der in der 2. Bundesliga (Herren) und 1. Bundesliga (Frauen) antritt. <a href="https://koelnerdrachenfub.github.io/KoelnerDrachen.github.io/" class="project-button">Kölner Drachen</a></li>
+                    <li><strong>Wrestling Events</strong> - Organisation von lokalen und internationalen Wrestling-Shows und Trainingscamps.</li>
+                </ul>
+            </div>
         </div>
         <div class="section">
             <h2>Über uns</h2>
@@ -101,5 +130,15 @@
     <footer>
         <p>© 2025 Ficken Und Bahn. Alle Rechte vorbehalten.</p>
     </footer>
+    <script>
+        function toggleProjects() {
+            var projectsSection = document.getElementById("projects-section");
+            if (projectsSection.style.display === "none" || projectsSection.style.display === "") {
+                projectsSection.style.display = "block";
+            } else {
+                projectsSection.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
