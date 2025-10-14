@@ -39,12 +39,24 @@
             color: #ffffff;
             margin-top: 0;
         }
-        .champion-list {
-            list-style: none;
-            padding: 0;
-        }
-        .champion-list li {
+        .title {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #444444;
+            border-radius: 5px;
             margin-bottom: 10px;
+        }
+        .title:hover {
+            background-color: #555555;
+        }
+        .division-list {
+            display: none;
+            list-style: none;
+            padding: 10px 0 0 20px;
+            margin: 0;
+        }
+        .division-list li {
+            margin-bottom: 5px;
         }
         a {
             color: #ff0000;
@@ -76,13 +88,76 @@
         </div>
         <div class="section">
             <h2>Champions</h2>
-            <p>Wir haben auch hier unsere Champions – hier sind sie einmal aufgelistet:</p>
-            <ul class="champion-list">
-                <li><strong>World Heavyweight Championship:</strong> The Assasin</li>
-                <li><strong>Undisputed Universal Championship:</strong> The Viking</li>
-                <li><strong>Money in The Bank:</strong> -</li>
-                <li><strong>FuB Tag Team Champions:</strong> Indus Sher</li>
-                <li><strong>Intercontinental Championship:</strong> Cody Rhodes</li>
+            <div class="title" onclick="toggleDivision('world-heavyweight')">World Heavyweight Championship: The Assasin</div>
+            <ul id="world-heavyweight" class="division-list">
+                <li>1. Shinsuke Nakamura</li>
+                <li>2. Roman Reigns</li>
+                <li>3. Seth "Freakin" Rollins</li>
+                <li>4. Jey Uso</li>
+                <li>5. The Rock</li>
+                <li>6. Drew McIntyre</li>
+                <li>7. Sami Zayn</li>
+                <li>8. Undertaker</li>
+            </ul>
+            <div class="title" onclick="toggleDivision('intercontinental')">Intercontinental Championship: Cody Rhodes</div>
+            <ul id="intercontinental" class="division-list">
+                <li>1. Bronson Reed</li>
+                <li>2. Ricochet</li>
+                <li>3. The Miz</li>
+                <li>4. "Dirty" Dominik Mysterio</li>
+                <li>5. Kevin Owens</li>
+                <li>6. Apollo Crews</li>
+                <li>7. Grayson Waller</li>
+                <li>8. Cedric Alexander</li>
+                <li>9. Omos</li>
+                <li>10. Dexter Lumis</li>
+                <li>11. MVP</li>
+                <li>12. Akira Tozawa</li>
+                <li>13. Gunther</li>
+                <li>14. JD McDonagh</li>
+            </ul>
+            <div class="title" onclick="toggleDivision('tag-team')">FuB Tag Team Champions: Indus Sher</div>
+            <ul id="tag-team" class="division-list">
+                <li>1. Sanga / Veer Mahan</li>
+                <li>2. Damian Priest / Finn Bálor</li>
+                <li>3. Kofi Kingston / Xavier Woods</li>
+                <li>4. Erik / Ivar</li>
+                <li>5. Elton Prince / Kit Wilson</li>
+                <li>6. Chad Gable / Otis</li>
+                <li>7. Johnny Gargano / Tommy Ciampa</li>
+                <li>8. Andre Chase / Duke Hudson</li>
+                <li>9. Giovanni Vinci / Ludwig Kaiser</li>
+            </ul>
+            <div class="title" onclick="toggleDivision('undisputed-universal')">Undisputed Universal Championship: The Viking</div>
+            <ul id="undisputed-universal" class="division-list">
+                <li>1. The Reaper</li>
+                <li>2. PsychoFox</li>
+                <li>3. John Cena</li>
+                <li>4. "The Anarchist" Thees</li>
+                <li>5. The Dark Horse</li>
+                <li>6. The Demon</li>
+                <li>7. Gregory "Italiano"</li>
+                <li>8. Shane McMahon</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Top 15 Superstars</h2>
+            <ul>
+                <li>1. Jey Uso</li>
+                <li>2. Cody Rhodes</li>
+                <li>3. Jinder Mahal</li>
+                <li>4. PsychoFox</li>
+                <li>5. The Assasin</li>
+                <li>6. The Viking</li>
+                <li>7. Finn Bálor</li>
+                <li>8. "The Anarchist" Thees</li>
+                <li>9. Gunther</li>
+                <li>10. Rey Mysterio</li>
+                <li>11. Joe Gacy</li>
+                <li>12. Seth "Freakin" Rollins</li>
+                <li>13. Sanga</li>
+                <li>14. Shane McMahon</li>
+                <li>15. R-Truth</li>
             </ul>
         </div>
         <div class="section">
@@ -93,5 +168,15 @@
     <footer>
         <p>© 2025 Ficken Und Bahn. Alle Rechte vorbehalten. <a href="index.html">Zurück zur Hauptseite</a></p>
     </footer>
+    <script>
+        function toggleDivision(divisionId) {
+            var division = document.getElementById(divisionId);
+            if (division.style.display === "none" || division.style.display === "") {
+                division.style.display = "block";
+            } else {
+                division.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
