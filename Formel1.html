@@ -18,10 +18,27 @@
         .card:hover{transform:translateY(-10px);box-shadow:0 10px 30px rgba(255,0,0,.4)}
         .card h3{color:#ff0000;margin:0 0 15px}
         .driver-img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:5px solid #ff0000;margin:15px auto;display:block}
-        table{width:100%;border-collapse:collapse;margin:20px 0}
+        
+        /* Tabellen-Switcher */
+        .tab-switcher{margin:20px 0;text-align:center}
+        .tab-btn{background:#333;color:#fff;padding:12px 30px;border:none;border-radius:50px;margin:0 10px;cursor:pointer;font-weight:bold;transition:.3s;font-size:16px}
+        .tab-btn.active{background:#ff0000;box-shadow:0 0 20px rgba(255,0,0,.6)}
+        .tab-btn:hover{background:#cc0000}
+        
+        .table-container{position:relative;overflow:hidden;border-radius:10px;height:600px}
+        .table-wrapper{position:absolute;width:200%;display:flex;transition:transform .5s ease}
+        .table-slide{width:50%;padding:0 20px;box-sizing:border-box}
+        table{width:100%;border-collapse:collapse;margin:0}
         th{background:#ff0000;color:#fff;padding:12px;text-align:center}
         td{padding:10px;border-bottom:1px solid #444;text-align:center}
         tr:nth-child(even){background:#1f1f1f}
+        
+        .copy-btn{background:#ff0000;color:#fff;border:none;padding:12px 25px;border-radius:5px;cursor:pointer;font-weight:bold;margin:20px auto;display:block;width:200px}
+        .copy-btn:hover{background:#cc0000}
+        
+        .history-btn{display:inline-block;margin:15px 0;padding:12px 30px;background:#ff0000;color:#fff;border-radius:50px;font-weight:bold;text-decoration:none}
+        .history-btn:hover{background:#cc0000}
+        
         .back-btn{display:inline-block;margin:30px 0;padding:14px 40px;background:#ff0000;color:#fff;border-radius:50px;font-weight:bold;text-decoration:none}
         .back-btn:hover{background:#cc0000}
         footer{text-align:center;padding:30px;background:#111;color:#888;font-size:14px}
@@ -59,6 +76,13 @@
         </div>
     </div>
 
+    <!-- NEU: Geschichte der FuB -->
+    <div class="section">
+        <h2>Die Geschichte der FuB in der Formel 1</h2>
+        <p>Von den ersten Schritten im Motorsport bis zum heutigen Kampf an der Spitze – hier erfährst du alles über die Reise von Ficken Und Bahn in der Königsklasse.</p>
+        <a href="Formel1Historie.html" class="history-btn">Zur kompletten FuB Formel-1-Geschichte</a>
+    </div>
+
     <div class="section">
         <h2>Fahrzeug 2025</h2>
         <p><strong>Bezeichnung:</strong> FuB F1-3<br>
@@ -74,32 +98,78 @@
         </ul>
     </div>
 
+    <!-- Tabellen-Switcher -->
     <div class="section">
-        <h2>Fahrer-WM Stand – Hauptrennen (letzte 6 Rennen)</h2>
-        <table>
-            <tr><th>Fahrer</th><th>Rennen →</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
-            <tr><td>Charles Leclerc</td><td></td><td>4</td><td>3</td><td>4</td><td>2</td><td>2</td><td>1</td></tr>
-            <tr><td>George Russell</td><td></td><td>3</td><td>1</td><td>2</td><td>7</td><td>3</td><td>5</td></tr>
-            <tr><td>Oscar Piastri</td><td></td><td>15</td><td>2</td><td>12</td><td>DNF</td><td>1</td><td>2</td></tr>
-            <tr><td>Ayrton Senna</td><td></td><td>5</td><td>4</td><td>DNF</td><td>5</td><td>4</td><td>3</td></tr>
-            <tr><td>Mika Häkkinen</td><td></td><td>2</td><td>7</td><td>1</td><td>4</td><td>8</td><td>12</td></tr>
-            <tr><td>Alexander Albon</td><td></td><td>1</td><td>6</td><td>3</td><td>9</td><td>12</td><td>7</td></tr>
-            <tr><td>Kimi Antonelli</td><td></td><td>6</td><td>9</td><td>6</td><td>3</td><td>5</td><td>4</td></tr>
-            <tr><td>Max Verstappen</td><td></td><td>12</td><td>15</td><td>13</td><td>1</td><td>7</td><td>9</td></tr>
-            <tr><td>Aiden Jackson</td><td></td><td>DNF</td><td>DNF</td><td>5</td><td>6</td><td>6</td><td>8</td></tr>
-            <tr><td>Lewis Hamilton</td><td></td><td>10</td><td>8</td><td>7</td><td>11</td><td>8</td><td>6</td></tr>
-            <tr><td>Franco Colapinto</td><td></td><td>8</td><td>10</td><td>8</td><td>8</td><td>13</td><td>11</td></tr>
-            <tr><td>Fernando Alonso</td><td></td><td>13</td><td>5</td><td>11</td><td>10</td><td>14</td><td>15</td></tr>
-            <tr><td>Gabriel Bortoleto</td><td></td><td>7</td><td>11</td><td>10</td><td>14</td><td>11</td><td>14</td></tr>
-            <tr><td>Mark Webber</td><td></td><td>9</td><td>12</td><td>9</td><td>13</td><td>10</td><td>10</td></tr>
-            <tr><td>Pierre Gasly</td><td></td><td>11</td><td>13</td><td>14</td><td>12</td><td>16</td><td>17</td></tr>
-            <tr><td>Jack Doohan</td><td></td><td>14</td><td>14</td><td>15</td><td>15</td><td>15</td><td>22</td></tr>
-            <tr><td>Liam Lawson</td><td></td><td>16</td><td>21</td><td>17</td><td>18</td><td>—</td><td>—</td></tr>
-            <tr><td>Esteban Ocon</td><td></td><td>20</td><td>17</td><td>16</td><td>21</td><td>18</td><td>21</td></tr>
-            <tr><td>Isack Hadjar</td><td></td><td>18</td><td>16</td><td>20</td><td>18</td><td>20</td><td>16</td></tr>
-            <tr><td>Zane Maloney</td><td></td><td>19</td><td>20</td><td>19</td><td>19</td><td>22</td><td>—</td></tr>
-        </table>
-        <p><em>Sprintrennen werden hier nicht aufgeführt.</em></p>
+        <h2>Renn-Ergebnisse</h2>
+        
+        <div class="tab-switcher">
+            <button class="tab-btn active" onclick="showTable(0)">Hauptrennen</button>
+            <button class="tab-btn" onclick="showTable(1)">Sprintrennen (Rennen 2 & 5)</button>
+        </div>
+
+        <div class="table-container">
+            <div class="table-wrapper" id="tableWrapper">
+                <!-- Hauptrennen -->
+                <div class="table-slide">
+                    <table id="main-table">
+                        <tr><th>Fahrer</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+                        <tr><td>Charles Leclerc</td><td>4</td><td>3</td><td>4</td><td>2</td><td>2</td><td>1</td></tr>
+                        <tr><td>George Russell</td><td>3</td><td>1</td><td>2</td><td>7</td><td>3</td><td>5</td></tr>
+                        <tr><td>Oscar Piastri</td><td>15</td><td>2</td><td>12</td><td>DNF</td><td>1</td><td>2</td></tr>
+                        <tr><td>Ayrton Senna</td><td>5</td><td>4</td><td>DNF</td><td>5</td><td>4</td><td>3</td></tr>
+                        <tr><td>Mika Häkkinen</td><td>2</td><td>7</td><td>1</td><td>4</td><td>8</td><td>12</td></tr>
+                        <tr><td>Alexander Albon</td><td>1</td><td>6</td><td>3</td><td>9</td><td>12</td><td>7</td></tr>
+                        <tr><td>Kimi Antonelli</td><td>6</td><td>9</td><td>6</td><td>3</td><td>5</td><td>4</td></tr>
+                        <tr><td>Max Verstappen</td><td>12</td><td>15</td><td>13</td><td>1</td><td>7</td><td>9</td></tr>
+                        <tr><td>Aiden Jackson</td><td>DNF</td><td>DNF</td><td>5</td><td>6</td><td>6</td><td>8</td></tr>
+                        <tr><td>Lewis Hamilton</td><td>10</td><td>8</td><td>7</td><td>11</td><td>8</td><td>6</td></tr>
+                        <tr><td>Franco Colapinto</td><td>8</td><td>10</td><td>8</td><td>8</td><td>13</td><td>11</td></tr>
+                        <tr><td>Fernando Alonso</td><td>13</td><td>5</td><td>11</td><td>10</td><td>14</td><td>15</td></tr>
+                        <tr><td>Gabriel Bortoleto</td><td>7</td><td>11</td><td>10</td><td>14</td><td>11</td><td>14</td></tr>
+                        <tr><td>Mark Webber</td><td>9</td><td>12</td><td>9</td><td>13</td><td>10</td><td>10</td></tr>
+                        <tr><td>Pierre Gasly</td><td>11</td><td>13</td><td>14</td><td>12</td><td>16</td><td>17</td></tr>
+                        <tr><td>Jack Doohan</td><td>14</td><td>14</td><td>15</td><td>15</td><td>15</td><td>22</td></tr>
+                        <tr><td>Liam Lawson</td><td>16</td><td>21</td><td>17</td><td>18</td><td>—</td><td>—</td></tr>
+                        <tr><td>Esteban Ocon</td><td>20</td><td>17</td><td>16</td><td>21</td><td>18</td><td>21</td></tr>
+                        <tr><td>Paul Aron</td><td>21</td><td>18</td><td>20</td><td>18</td><td>20</td><td>16</td></tr>
+                        <tr><td>Isack Hadjar</td><td>18</td><td>16</td><td>20</td><td>18</td><td>20</td><td>16</td></tr>
+                        <tr><td>Zane Maloney</td><td>19</td><td>20</td><td>19</td><td>19</td><td>22</td><td>—</td></tr>
+                    </table>
+                </div>
+
+                <!-- Sprintrennen -->
+                <div class="table-slide">
+                    <table id="sprint-table">
+                        <tr><th>Fahrer</th><th>Sprint 2</th><th>Sprint 5</th></tr>
+                        <tr><td>George Russell</td><td>1</td><td>3</td></tr>
+                        <tr><td>Oscar Piastri</td><td>2</td><td>1</td></tr>
+                        <tr><td>Charles Leclerc</td><td>3</td><td>2</td></tr>
+                        <tr><td>Ayrton Senna</td><td>4</td><td>4</td></tr>
+                        <tr><td>Fernando Alonso</td><td>5</td><td>14</td></tr>
+                        <tr><td>Alexander Albon</td><td>6</td><td>DNF</td></tr>
+                        <tr><td>Mika Häkkinen</td><td>7</td><td>9</td></tr>
+                        <tr><td>Lewis Hamilton</td><td>8</td><td>8</td></tr>
+                        <tr><td>Kimi Antonelli</td><td>9</td><td>5</td></tr>
+                        <tr><td>Franco Colapinto</td><td>10</td><td>13</td></tr>
+                        <tr><td>Gabriel Bortoleto</td><td>11</td><td>11</td></tr>
+                        <tr><td>Mark Webber</td><td>12</td><td>10</td></tr>
+                        <tr><td>Pierre Gasly</td><td>13</td><td>16</td></tr>
+                        <tr><td>Max Verstappen</td><td>15</td><td>7</td></tr>
+                        <tr><td>Isack Hadjar</td><td>16</td><td>21</td></tr>
+                        <tr><td>Esteban Ocon</td><td>17</td><td>18</td></tr>
+                        <tr><td>Paul Aron</td><td>18</td><td>20</td></tr>
+                        <tr><td>Jack Doohan</td><td>19</td><td>19</td></tr>
+                        <tr><td>Zane Maloney</td><td>20</td><td>22</td></tr>
+                        <tr><td>Liam Lawson</td><td>21</td><td>17</td></tr>
+                        <tr><td>Aiden Jackson</td><td>22</td><td>6</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align:center">
+            <button class="copy-btn" onclick="copyCurrentTable()">Copy to Clipboard</button>
+        </div>
     </div>
 
     <a href="index.html" class="back-btn">Zurück zur Hauptseite</a>
@@ -109,6 +179,40 @@
 <footer>
     © 2025 Ficken Und Bahn – FuB Formel 1 | Alle Rechte vorbehalten
 </footer>
+
+<script>
+let currentTable = 0;
+
+function showTable(index) {
+    currentTable = index;
+    const wrapper = document.getElementById('tableWrapper');
+    wrapper.style.transform = `translateX(-${index * 50}%)`;
+    
+    document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === index);
+    });
+}
+
+function copyCurrentTable() {
+    const tables = ['main-table', 'sprint-table'];
+    const tableId = tables[currentTable];
+    const table = document.getElementById(tableId);
+    
+    let text = "";
+    for (let row of table.rows) {
+        let rowText = "";
+        for (let cell of row.cells) {
+            let cellText = cell.innerText.trim();
+            rowText += cellText + "\t";
+        }
+        text += rowText.trim() + "\n";
+    }
+    
+    navigator.clipboard.writeText(text.trim()).then(() => {
+        alert("Tabelle wurde in genau deinem Format kopiert!");
+    });
+}
+</script>
 
 </body>
 </html>
