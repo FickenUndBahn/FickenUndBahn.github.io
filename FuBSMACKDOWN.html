@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuB SmackDown – Die blaue Kampfmaschine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --blue:#005BBB;
+            --lightblue:#0077ee;
+            --white:#ffffff;
+            --silver:#c0c0c0;
+            --black:#000000;
+            --gray:#1a1a1a;
+        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Roboto',sans-serif;background:var(--black);color:var(--white);line-height:1.6}
+        .container{max-width:1300px;margin:0 auto;padding:20px}
+
+        /* Header */
+        header{background:var(--blue);padding:20px 0;box-shadow:0 8px 30px rgba(0,91,187,.6);position:relative;overflow:hidden}
+        header::before{content:'';position:absolute;inset:0;background:linear-gradient(45deg,transparent 30%,rgba(255,255,255,.1) 50%,transparent 70%);animation:shine 6s infinite}
+        .header-inner{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 20px}
+        .logo img{height:80px;border-radius:10px;border:3px solid var(--white)}
+        nav a{color:var(--white);text-decoration:none;font-weight:700;font-size:1.1rem;margin:0 20px;transition:.3s;position:relative}
+        nav a:hover{color:var(--silver)}
+        nav a::after{content:'';position:absolute;bottom:-8px;left:0;width:0;height:3px;background:var(--silver);transition:.3s}
+        nav a:hover::after{width:100%}
+
+        /* Hero */
+        .hero{position:relative;height:80vh;overflow:hidden}
+        .hero-slider{display:flex;width:300%;height:100%;animation:slide 18s infinite}
+        .slide{flex:1;background-size:cover;background-position:center;position:relative}
+        .slide::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.9),transparent 30%,transparent 70%,rgba(0,0,0,.8))}
+        .hero-content{position:absolute;bottom:15%;left:50%;transform:translateX(-50%);text-align:center;z-index:2}
+        .hero-content h1{font-family:'Bebas Neue',sans-serif;font-size:6rem;color:var(--white);text-shadow:0 0 30px var(--blue);letter-spacing:8px}
+        .cta-buttons{margin-top:30px}
+        .cta-btn{display:inline-block;padding:16px 40px;margin:0 15px;background:var(--blue);color:var(--white);font-size:1.3rem;font-weight:bold;border-radius:50px;text-decoration:none;transition:.4s;box-shadow:0 8px 20px rgba(0,91,187,.5)}
+        .cta-btn:hover{background:var(--lightblue);transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,91,187,.7)}
+
+        /* Roster Grid */
+        .section{padding:60px 0}
+        h2{font-family:'Bebas Neue',sans-serif;font-size:4rem;text-align:center;margin-bottom:50px;color:var(--blue);text-shadow:0 0 20px rgba(0,91,187,.5)}
+        .roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:30px}
+        .superstar{background:var(--gray);border-radius:15px;overflow:hidden;transition:.4s;box-shadow:0 10px 25px rgba(0,0,0,.6)}
+        .superstar:hover{transform:translateY(-15px);box-shadow:0 20px 40px rgba(0,91,187,.6)}
+        .superstar img{width:100%;height:320px;object-fit:cover}
+        .info{padding:20px;text-align:center}
+        .info h3{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--white);margin:10px 0}
+        }
+        .info p{font-size:1.1rem;color:var(--silver);margin:8px 0}
+        .view-profile{display:inline-block;margin-top:15px;padding:10px 25px;background:var(--blue);color:var(--white);border-radius:30px;text-decoration:none;font-weight:bold;transition:.3s}
+        .view-profile:hover{background:var(--lightblue)}
+
+        /* Matches */
+        .matches{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;margin-top:40px}
+        .match-card{background:var(--gray);padding:25px;border-radius:12px;text-align:center;border:2px solid var(--blue)}
+        .match-card h4{font-size:1.8rem;color:var(--blue)}
+        .vs{font-size:3rem;font-weight:bold;color:var(--silver);margin:15px 0}
+
+        /* Footer */
+        footer{background:var(--gray);padding:50px 20px;text-align:center}
+        .social-icons a{margin:0 15px;font-size:2rem;color:var(--silver);transition:.3s}
+        .social-icons a:hover{color:var(--blue);transform:scale(1.3)}
+
+        @keyframes slide{0%,100%{transform:translateX(0)}33%{transform:translateX(-100%)}66%{transform:translateX(-200%)}
+        @keyframes shine{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">
+            <img src="fub.png" alt="FuB Logo">
+        </div>
+        <nav>
+            <a href="#roster">Roster</a>
+            <a href="#matches">Matches & Events</a>
+            <a href="#news">News</a>
+            <a href="#merch">Merch</a>
+            <a href="#videos">Videos</a>
+            <a href="#tickets">Tickets</a>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="hero-slider">
+        <div class="slide" style="background:url('https://via.placeholder.com/1920x1080/111/005BBB?text=GUNTHER+vs+BIG+E')"></div>
+        <div class="slide" style="background:url('https://via.placeholder.com/1920x1080/111/005BBB?text=SAMI+ZAYN+ACTION')"></div>
+        <div class="slide" style="background:url('https://via.placeholder.com/1920x1080/111/005BBB?text=CHARLOTTE+FLAIR')"></div>
+    </div>
+    <div class="hero-content">
+        <h1>FuB SMACKDOWN</h1>
+        <div class="cta-buttons">
+            <a href="#tickets" class="cta-btn">TICKETS SICHERN</a>
+            <a href="#videos" class="cta-btn">HIGHLIGHTS ANSEHEN</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <section class="section" id="roster">
+        <h2>SmackDown Roster 2025</h2>
+        <div class="roster-grid">
+            <!-- Du kannst hier später echte Bilder einbauen -->
+            <div class="superstar">
+                <img src="https://via.placeholder.com/400x500/222/005BBB?text=GUNTHER" alt="GUNTHER">
+                <div class="info">
+                    <h3>GUNTHER</h3>
+                    <p>The Ring General • Imperium Leader</p>
+                    <a href="#" class="view-profile">Profil ansehen</a>
+                </div>
+            </div>
+            <div class="superstar">
+                <img src="https://via.placeholder.com/400x500/222/005BBB?text=BIG+E" alt="Big E">
+                <div class="info">
+                    <h3>BIG E</h3>
+                    <p>Powerhouse • New Day</p>
+                    <a href="#" class="view-profile">Profil ansehen</a>
+                </div>
+            </div>
+            <div class="superstar">
+                <img src="https://via.placeholder.com/400x500/222/005BBB?text=SAMI+ZAYN" alt="Sami Zayn">
+                <div class="info">
+                    <h3>SAMI ZAYN</h3>
+                    <p>Honorary Uce • Master Strategist</p>
+                    <a href="#" class="view-profile">Profil ansehen</a>
+                </div>
+            </div>
+            <!-- Weitere 17 Superstars kommen hier rein – Platzhalter für jetzt -->
+            <!-- Du sagst einfach Bescheid, wenn du die echten Namen willst -->
+        </div>
+    </section>
+
+    <section class="section" id="matches">
+        <h2>Upcoming Matches & Events</h2>
+        <div class="matches">
+            <div class="match-card">
+                <h4>MAIN EVENT</h4>
+                <p class="vs">GUNTHER vs. BIG E</p>
+                <p>World Heavyweight Championship</p>
+            </div>
+            <div class="match-card">
+                <h4>WOMEN'S CHAMPIONSHIP</h4>
+                <p class="vs">CHARLOTTE FLAIR vs. BECKY LYNCH</p>
+                <p>SmackDown Women’s Title</p>
+            </div>
+            <div class="match-card">
+                <h4>TAG TEAM</h4>
+                <p class="vs">THE USOS vs. STREET PROFITS</p>
+                <p>Undisputed Tag Team Titles</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <div class="social-icons">
+        <a href="#">Instagram</a> <a href="#">Twitter</a> <a href="#">TikTok</a> <a href="#">YouTube</a>
+    </div>
+    <p>© 2025 Ficken Und Bahn – FuB SmackDown | Alle Rechte vorbehalten</p>
+</footer>
+
+</body>
+</html>
