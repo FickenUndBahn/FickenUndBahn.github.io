@@ -3,155 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ficken Und Bahn Wrestling</title>
+    <title>FuB Wrestling – Die Wrestling Liga von der FuB</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000000;
-            color: #ffffff;
-        }
-        .container {
-            max-width: 1000px;
-            margin:  margin: 0 auto;
-            padding: 20px;
-        }
-        .header {
-            background-color: #ff0000;
-            color: white;
-            padding: 15px 20px;
-            text-align: left;
-            display: flex;
-            align-items: center;
-        }
-        .header img {
-            width: 50px;
-            height: 50px;
-            margin-right: 15px;
-            border-radius: 5px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-        .section {
-            background: #333333;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        .section h2 {
-            font-size: 24px;
-            color: #ffffff;
-            margin-top: 0;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .shows-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        .show-card {
-            background: #222;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 3px solid transparent;
-        }
-        .show-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 15px 40px rgba(255,0,0,0.6);
-        }
-        .show-card h3 {
-            font-size: 32px;
-            margin: 15px 0;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-        .raw h3 { color: #ff0000; border-bottom: 4px solid #ff0000; }
-        .nxt h3 { color: #ffd700; border-bottom: 4px solid #ffd700; }
-        .smackdown h3 { color: #0066ff; border-bottom: 4px solid #0066ff; }
-        .ecw h3 { color: #9d00ff; border-bottom: 4px solid #9d00ff; }
-        
-        .show-card a {
-            display: block;
-            padding: 18px;
-            background: rgba(255,255,255,0.1);
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 8px;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-        .show-card a:hover {
-            background: rgba(255,255,255,0.2);
-            transform: scale(1.05);
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #888;
-            font-size: 14px;
-        }
+        body{font-family:Arial,sans-serif;margin:0;padding:0;background:#000;color:#fff}
+        .container{max-width:1000px;margin:0 auto;padding:20px}
+        .header{background:#ff0000;color:#fff;padding:15px 20px;display:flex;align-items:center}
+        .header img{width:50px;height:50px;margin-right:15px;border-radius:5px}
+        .header h1{margin:0;font-size:28px}
+        .section{background:#333;padding:25px;margin-bottom:25px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.5)}
+        .section h2{font-size:24px;color:#fff;margin-top:0;text-align:center;margin-bottom:30px}
+        .shows-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+        .show-card{background:#222;padding:30px;border-radius:12px;text-align:center;transition:.3s;border:3px solid transparent}
+        .show-card:hover{transform:translateY(-12px);box-shadow:0 15px 40px rgba(255,0,0,.6)}
+        .show-card h3{font-size:32px;margin:15px 0;font-weight:bold;text-transform:uppercase;letter-spacing:3px}
+        .raw h3{color:#ff0000;border-bottom:4px solid #ff0000}
+        .nxt h3{color:#ffd700;border-bottom:4px solid #ffd700}
+        .smackdown h3{color:#0066ff;border-bottom:4px solid #0066ff}
+        .ecw h3{color:#9d00ff;border-bottom:4px solid #9d00ff}
+        .show-card a{display:block;padding:18px;background:rgba(255,255,255,.1);color:#fff;text-decoration:none;font-size:18px;font-weight:bold;border-radius:8px;margin-top:20px;transition:.3s}
+        .show-card a:hover{background:rgba(255,255,255,.2,.2);transform:scale(1.05)}
+        .back-btn{display:inline-block;margin:30px auto;padding:14px 40px;background:#ff0000;color:#fff;border-radius:50px;font-weight:bold;text-decoration:none}
+        .back-btn:hover{background:#cc0000}
+        footer{text-align:center;padding:30px;color:#888;font-size:14px}
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <img src="fub.png" alt="FuB Logo">
-        <h1>Ficken Und Bahn Wrestling</h1>
-    </div>
+<div class="header">
+    <img src="fub.png" alt="FuB Logo">
+    <h1>FuB Wrestling – Die Wrestling Liga von der FuB</h1>
+</div>
 
-    <div class="container">
+<div class="container">
 
-        <div class="section">
-            <h2>Wähle deine Show</h2>
+    <div class="section">
+        <h2>Wähle deine Show</h2>
 
-            <div class="shows-grid">
+        <div class="shows-grid">
 
-                <div class="show-card raw">
-                    <h3>RAW</h3>
-                    <p>Die rote Flaggschiff-Show – Montags live!</p>
-                    <a href="FuBRAW.html">Zu RAW →</a>
-                </div>
-
-                <div class="show-card nxt">
-                    <h3>NXT</h3>
-                    <p>Die Zukunft des Wrestlings – jung, wild, unbesiegbar!</p>
-                    <a href="FuBNXT.html">Zu NXT →</a>
-                </div>
-
-                <div class="show-card smackdown">
-                    <h3>SmackDown</h3>
-                    <p>Die blaue Kampfmaschine – Freitags auf Hochtouren!</p>
-                    <a href="FuBSmackDown.html">Zu SmackDown →</a>
-                </div>
-
-                <div class="show-card ecw">
-                    <h3>ECW</h3>
-                    <p>Hardcore is back – extrem, brutal, legendär!</p>
-                    <a href="FuBECW.html">Zu ECW →</a>
-                </div>
-
+            <div class="show-card raw">
+                <h3>RAW</h3>
+                <p>Die rote Flaggschiff-Show – Montags live!</p>
+                <a href="FuBRAW.html">Zu RAW</a>
             </div>
-        </div>
 
-        <div class="section" style="text-align:center;">
-            <p style="font-size:18px;">Alle Shows sind Teil des <strong>Ficken Und Bahn Wrestling</strong>-Universums.</p>
-        </div>
+            <div class="show-card nxt">
+                <h3>NXT</h3>
+                <p>Die Zukunft des Wrestlings – jung, wild, unbesiegbar!</p>
+                <a href="FuBNXT.html">Zu NXT</a>
+            </div>
 
+            <div class="show-card smackdown">
+                <h3>SmackDown</h3>
+                <p>Die blaue Kampfmaschine – Freitags auf Hochtouren!</p>
+                <a href="FuBSmackDown.html">Zu SmackDown</a>
+            </div>
+
+            <div class="show-card ecw">
+                <h3>ECW</h3>
+                <p>Hardcore is back – extrem, brutal, legendär!</p>
+                <a href="FuBECW.html">Zu ECW</a>
+            </div>
+
+        </div>
     </div>
 
-    <footer>
-        <p>© 2025 Ficken Und Bahn Wrestling. Alle Rechte vorbehalten.</p>
-    </footer>
+    <div style="text-align:center">
+        <a href="index.html" class="back-btn">Zurück zur FuB Hauptseite</a>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Ficken Und Bahn Wrestling | Alle Rechte vorbehalten
+</footer>
 
 </body>
 </html>
