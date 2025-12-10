@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuB Wrestling – Hauptseite</title>
+    <style>
+        :root{--red:#ff0000;--yellow:#ffdd00;--blue:#0066ff;--purple:#9d00ff;--black:#000;--dark:#111}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:var(--black);color:#fff;font-family:'Impact','Arial Black',sans-serif;overflow:hidden}
+        
+        header{background:linear-gradient(90deg,var(--red),var(--yellow),var(--blue),var(--purple));padding:40px 20px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.9)}
+        header img{width:100px;height:100px;border-radius:15px;border:6px solid #fff;box-shadow:0 0 30px #000}
+        header h1{font-size:5.5rem;margin:20px 0 15px;letter-spacing:12px;text-transform:uppercase;text-shadow:0 0 30px #000}
+        header p{font-size:2rem;letter-spacing:6px;text-shadow:0 0 15px #000}
+        
+        .container{max-width:1400px;margin:40px auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:40px}
+        
+        .show-card{position:relative;height:420px;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.8);transition:.6s;perspective:1000px;cursor:pointer}
+        .show-card:hover{transform:scale(1.08) rotateY(5deg);box-shadow:0 30px 80px rgba(255,255,255,.2)}
+        
+        .raw{background:linear-gradient(135deg,var(--red),#8b0000)}
+        .nxt{background:linear-gradient(135deg,var(--yellow),#b8860b,#000)}
+        .smackdown{background:linear-gradient(135deg,var(--blue),#00008b)}
+        .ecw{background:linear-gradient(135deg,var(--purple),#4b0082)}
+        
+        .show-card::before{content:'';position:absolute;inset:0;background:linear-gradient(45deg,transparent 30%,rgba(255,255,255,.1) 50%,transparent 70%);transform:translateX(-100%);transition:.8s}
+        .show-card:hover::before{transform:translateX(100%)}
+        
+        .card-content{position:absolute;bottom:0;left:0;right:0;padding:40px;text-align:center;backdrop-filter:blur(10px);background:rgba(0,0,0,.7)}
+        .card-content h2{font-size:4.5rem;margin-bottom:15px;text-shadow:0 0 20px #000;letter-spacing:8px}
+        .card-content p{font-size:1.6rem}
+        
+        .raw h2,.raw p{color:#fff;text-shadow:0 0 20px var(--red)}
+        .nxt h2,.nxt p{color:#000;text-shadow:0 0 15px var(--yellow)}
+        .smackdown h2,.smackdown p{color:#fff;text-shadow:0 0 20px var(--blue)}
+        .ecw h2,.ecw p{color:#fff;text-shadow:0 0 20px var(--purple)}
+        
+        footer{text-align:center;padding:50px;background:var(--dark);margin-top:60px;font-size:1.3rem}
+        .back-btn{display:inline-block;margin-top:30px;padding:18px 60px;background:#fff;color:var(--black);font-size:1.8rem;font-weight:bold;border-radius:50px;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.8);transition:.4s}
+        .back-btn:hover{background:var(--red);color:#fff;transform:scale(1.1)}
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="fub.png" alt="FuB Logo">
+    <h1>FuB WRESTLING</h1>
+    <p>WÄHL DEINE SHOW</p>
+</header>
+
+<div class="container">
+
+    <a href="FuBRAW.html">
+        <div class="show-card raw">
+            <div class="card-content">
+                <h2>RAW</h2>
+                <p>Montagabend – Die größte Show der Welt</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="FuBNXT.html">
+        <div class="show-card nxt">
+            <div class="card-content">
+                <h2>NXT</h2>
+                <p>Die Zukunft des Wrestlings – jetzt!</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="FuBSmackdown.html">
+        <div class="show-card smackdown">
+            <div class="card-content">
+                <h2>SMACKDOWN</h2>
+                <p>Freitagabend – Härter als je zuvor</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="FuBECW.html">
+        <div class="show-card ecw">
+            <div class="card-content">
+                <h2>ECW</h2>
+                <p>Extreme Rules – No Limits</p>
+            </div>
+        </div>
+    </a>
+
+</div>
+
+<footer>
+    © 2025 Ficken Und Bahn Wrestling | Alle Rechte vorbehalten<br><br>
+    <a href="index.html" class="back-btn">ZURÜCK ZUR HAUPTSEITE</a>
+</footer>
+
+</body>
+</html>
