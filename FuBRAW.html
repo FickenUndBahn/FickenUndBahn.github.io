@@ -6,266 +6,101 @@
     <title>FuB RAW – Montag Nacht ist Krieg</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root{--red:#D32F2F;--darkred:#B71C1C;--gold:#FFD700;--black:#000;--gray:#111;}
+        :root{--red:#D32F2F;--white:#FFFFFF;--gold:#FFD700;--black:#000;--gray:#1a1a1a}
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Roboto',sans-serif;background:var(--black);color:#fff;overflow-x:hidden}
-        header{background:var(--red);padding:20px 0;position:relative;overflow:hidden;box-shadow:0 10px 30px rgba(211,47,47,.7)}
-        header::before{content:'';position:absolute;inset:0;background:linear-gradient(45deg,transparent 48%,rgba(255,255,255,.1) 50%,transparent 52%);animation:shine 4s infinite}
-        @keyframes shine{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-        .header-inner{max-width:1300px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 30px}
-        .logo img{height:80px;filter:drop-shadow(0 0 15px #000)}
-        nav a{color:#fff;font-family:'Bebas Neue',sans-serif;font-size:1.4rem;margin:0 20px;text-decoration:none;text-shadow:0 0 10px #000;transition:.3s}
-        nav a:hover{color:var(--gold);text-shadow:0 0 20px var(--gold)}
-        
-        .hero{height:90vh;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),url('https://via.placeholder.com/1920x1080/111/fff?text=RAW+CROWD+ACTION') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
-        .hero h1{font-family:'Bebas Neue',sans-serif;font-size:9rem;color:var(--red);text-shadow:0 0 40px #000,0 0 80px var(--red);animation:pulse 3s infinite}
-        @keyframes pulse{0%,100%{text-shadow:0 0 40px #000,0 0 80px var(--red)}50%{text-shadow:0 0 60px #000,0 0 120px var(--red)}}
-        .hero p{font-size:2.2rem;margin:20px 0;letter-spacing:4px}
-        .cta-btn{display:inline-block;padding:18px 50px;background:var(--gold);color:#000;font-family:'Bebas Neue',sans-serif;font-size:2rem;border-radius:50px;margin:20px;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.8);transition:.4s}
-        .cta-btn:hover{background:#fff;transform:scale(1.1);box-shadow:0 20px 50px rgba(255,215,0,.8)}
-        
-        .section{padding:80px 30px}
-        h2{font-family:'Bebas Neue',sans-serif;font-size:5rem;text-align:center;margin-bottom:60px;color:var(--red);text-shadow:0 0 20px #000}
-        .roster-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1400px;margin:0 auto}
-        .superstar{background:var(--gray);border-radius:15px;overflow:hidden;position:relative;transition:.4s;box-shadow:0 10px 30px rgba(0,0,0,.6)}
-        .superstar:hover{transform:translateY(-20px);box-shadow:0 30px 80px rgba(211,47,47,.8)}
-        .superstar img{width:100%;height:380px;object-fit:cover;filter:brightness(.85)}
-        .info{padding:20px;text-align:center;background:var(--red)}
-        .info h3{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;margin:10px 0;color:#fff}
-        .info p{font-size:1.1rem;color:#fff;opacity:.9}
-        .view-profile{position:absolute;inset:0;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;opacity:0;transition:.4s}
-        .superstar:hover .view-profile{opacity:1}
-        .view-profile a{color:var(--gold);font-family:'Bebas Neue',sans-serif;font-size:2rem;text-decoration:none}
-        
-        footer{background:var(--darkred);text-align:center;padding:40px;font-size:1.1rem}
-        .back{display:inline-block;margin:40px auto;padding:16px 60px;background:var(--gold);color:#000;font-size:1.8rem;border-radius:50px;text-decoration:none;font-weight:bold}
-        .back:hover{background:#fff}
-        @media(max-width:768px){
-            .hero h1{font-size:5rem}
-            nav a{font-size:1.1rem;margin:0 10px}
-        }
+        body{font-family:'Roboto',sans-serif;background:var(--black);color:var(--white)}
+        .container{max-width:1300px;margin:0 auto;padding:20px}
+
+        header{background:var(--red);padding:20px 0;box-shadow:0 8px 30px rgba(211,47,47,.6)}
+        .header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+        .logo h1{font-family:'Bebas Neue';font-size:4.5rem;color:var(--white);letter-spacing:6px;text-shadow:0 0 20px var(--gold)}
+        nav a{color:var(--white);font-weight:bold;font-size:1.2rem;margin:0 15px;padding:10px 20px;border:2px solid var(--gold);border-radius:8px;text-decoration:none;transition:.3s}
+        nav a:hover{background:var(--gold);color:var(--black)}
+
+        .hero{height:90vh;background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),url('https://via.placeholder.com/1920x1080/111/fff?text=RAW+HERO') center/cover;display:flex;align-items:center;justify-content:center;text-align:center}
+        .hero h2{font-family:'Bebas Neue';font-size:7rem;color:var(--red);text-shadow:0 0 40px #000}
+        .hero p{font-size:2rem;margin:20px 0}
+        .cta-btn{display:inline-block;padding:18px 50px;background:var(--red);color:var(--white);font-size:1.8rem;border-radius:50px;text-decoration:none;margin:15px;transition:.4s}
+        .cta-btn:hover{background:var(--white);color:var(--red);transform:scale(1.1)}
+
+        .section{padding:70px 0}
+        h2{font-family:'Bebas Neue';font-size:4.5rem;text-align:center;margin-bottom:50px;color:var(--red)}
+
+        .gm-section{background:var(--gray);padding:40px;border-radius:15px;text-align:center;margin-bottom:50px;border:4px solid var(--red);box-shadow:0 0 30px rgba(211,47,47,.4)}
+        .gm-section h3{font-size:3rem;color:var(--red);margin-bottom:20px}
+        .gm-section p{font-size:1.4rem}
+
+        .roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px}
+        .superstar{background:var(--gray);border-radius:15px;overflow:hidden;transition:.4s;box-shadow:0 10px 30px rgba(0,0,0,.5);border:3px solid var(--red)}
+        .superstar:hover{transform:translateY(-15px);box-shadow:0 20px 50px rgba(211,47,47,.7);border-color:var(--gold)}
+        .superstar img{width:100%;height:400px;object-fit:cover}
+        .info{padding:25px;text-align:center}
+        .info h3{font-family:'Bebas Neue';font-size:2.8rem;color:var(--red);margin-bottom:10px}
+        .info p{font-size:1.2rem;color:#ccc}
+
+        .back-btn{display:block;width:320px;margin:60px auto;padding:18px;background:var(--red);color:var(--white);text-align:center;border-radius:50px;font-size:1.6rem;border:3px solid var(--gold);text-decoration:none;transition:.3s}
+        .back-btn:hover{background:var(--gold);color:var(--black)}
+
+        footer{background:var(--gray);text-align:center;padding:40px;color:#888}
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-inner">
+    <div class="container header-inner">
         <div class="logo">
-            <img src="fub.png" alt="FuB Logo">
+            <h1>FuB RAW</h1>
         </div>
         <nav>
             <a href="#roster">Roster</a>
-            <a href="#">Matches</a>
-            <a href="#">News</a>
-            <a href="#">Merch</a>
-            <a href="#">Videos</a>
-            <a href="#">Tickets</a>
+            <a href="RawNews.html">News</a>
         </nav>
     </div>
 </header>
 
-<section class="hero">
-    <div>
-        <h1>FuB RAW</h1>
-        <p>MONTAG NACHT IST KRIEG</p>
-        <a href="#" class="cta-btn">TICKETS SICHERN</a>
-        <a href="#" class="cta-btn">MERCH SHOP</a>
-    </div>
-</section>
-
-<section class="section" id="roster">
-    <h2>RAW ROSTER</h2>
-    <div class="roster-grid">
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Roman+Reigns" alt="Roman Reigns">
-            <div class="info">
-                <h3>Roman Reigns</h3>
-                <p>The Tribal Chief</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=John+Cena" alt="John Cena">
-            <div class="info">
-                <h3>John Cena</h3>
-                <p>The Face That Runs The Place</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Solo+Sikoa" alt="Solo Sikoa">
-            <div class="info">
-                <h3>Solo Sikoa</h3>
-                <p>The Enforcer</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=AJ+Styles" alt="AJ Styles">
-            <div class="info">
-                <h3>AJ Styles</h3>
-                <p>The Phenomenal One</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=LA+Knight" alt="LA Knight">
-            <div class="info">
-                <h3>LA Knight</h3>
-                <p>YEAH!</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Raquel+Rodriguez" alt="Raquel Rodriguez">
-            <div class="info">
-                <h3>Raquel Rodriguez</h3>
-                <p>Powerhouse</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Jey+Uso" alt="Jey Uso">
-            <div class="info">
-                <h3>Jey Uso</h3>
-                <p>Main Event Jey</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Alexa+Bliss" alt="Alexa Bliss">
-            <div class="info">
-                <h3>Alexa Bliss</h3>
-                <p>The Goddess</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=The+Miz" alt="The Miz">
-            <div class="info">
-                <h3>The Miz</h3>
-                <p>A-Lister</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=OMOS" alt="OMOS">
-            <div class="info">
-                <h3>OMOS</h3>
-                <p>The Nigerian Giant</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Santos+Escobar" alt="Santos Escobar">
-            <div class="info">
-                <h3>Santos Escobar</h3>
-                <p>Emperor of Lucha</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Zoey+Stark" alt="Zoey Stark">
-            <div class="info">
-                <h3>Zoey Stark</h3>
-                <p>Stark Raving Mad</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Isla+Dawn" alt="Isla Dawn">
-            <div class="info">
-                <h3>Isla Dawn</h3>
-                <p>The Witch</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Tiffany+Stratton" alt="Tiffany Stratton">
-            <div class="info">
-                <h3>Tiffany Stratton</h3>
-                <p>Tiffy Time</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Blaze" alt="Blaze">
-            <div class="info">
-                <h3>Blaze</h3>
-                <p>The Firestarter</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=The+Iron+Wolf" alt="The Iron Wolf">
-            <div class="info">
-                <h3>The Iron Wolf</h3>
-                <p>Alpha Predator</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Gregory+Italiano" alt="Gregory Italiano">
-            <div class="info">
-                <h3>Gregory "Italiano"</h3>
-                <p>The Italian Stallion</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Jimmy+Hunter" alt="Jimmy Hunter">
-            <div class="info">
-                <h3>Jimmy Hunter</h3>
-                <p>The Hunter</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=The+Knight" alt="The Knight">
-            <div class="info">
-                <h3>The Knight</h3>
-                <p>Dark Knight</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-        <div class="superstar">
-            <img src="https://via.placeholder.com/400x600/111/fff?text=Lawrence+Hunter" alt="Lawrence Hunter">
-            <div class="info">
-                <h3>Lawrence Hunter</h3>
-                <p>The Final Boss</p>
-            </div>
-            <div class="view-profile"><a href="#">Profil ansehen</a></div>
-        </div>
-
-    </div>
-</section>
-
-<div style="text-align:center">
-    <a href="wrestling.html" class="back">Zurück zur Wrestling-Übersicht</a>
+<div class="hero">
+    <h2>MONDAY NIGHT RAW</h2>
+    <p>THE RED BRAND – WHERE LEGENDS ARE MADE</p>
+    <a href="#roster" class="cta-btn">ZUM ROSTER</a>
 </div>
 
+<div class="container section">
+    <div class="gm-section">
+        <h3>General Manager</h3>
+        <p><strong>Christian Jenkins</strong></p>
+    </div>
+</div>
+
+<div class="container section" id="roster">
+    <h2>RAW ROSTER</h2>
+    <div class="roster-grid">
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Roman+Reigns" alt="Roman Reigns"><div class="info"><h3>ROMAN REIGNS</h3><p>The Tribal Chief</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=John+Cena" alt="John Cena"><div class="info"><h3>JOHN CENA</h3><p>The Champ</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Solo+Sikoa" alt="Solo Sikoa"><div class="info"><h3>SOLO SIKOA</h3><p>The Enforcer</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=AJ+Styles" alt="AJ Styles"><div class="info"><h3>AJ STYLES</h3><p>The Phenomenal One</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=LA+Knight" alt="LA Knight"><div class="info"><h3>LA KNIGHT</h3><p>Yeah!</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Raquel+Rodriguez" alt="Raquel Rodriguez"><div class="info"><h3>RAQUEL RODRIGUEZ</h3><p>The Strong</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Jey+Uso" alt="Jey Uso"><div class="info"><h3>JEY USO</h3><p>Main Event Jey</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Alexa+Bliss" alt="Alexa Bliss"><div class="info"><h3>ALEXA BLISS</h3><p>The Goddess</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=The+Miz" alt="The Miz"><div class="info"><h3>THE MIZ</h3><p>The A-Lister</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=OMOS" alt="OMOS"><div class="info"><h3>OMOS</h3><p>The Nigerian Giant</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Santos+Escobar" alt="Santos Escobar"><div class="info"><h3>SANTOS ESCOBAR</h3><p>Legado Leader</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Zoey+Stark" alt="Zoey Stark"><div class="info"><h3>ZOey STARK</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Isla+Dawn" alt="Isla Dawn"><div class="info"><h3>ISLA DAWN</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Tiffany+Straton" alt="Tiffany Straton"><div class="info"><h3>TIFFANY STRATTON</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Blaze" alt="Blaze"><div class="info"><h3>BLAZE</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=The+Iron+Wolf" alt="The Iron Wolf"><div class="info"><h3>THE IRON WOLF</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Gregory+Italiano" alt="Gregory Italiano"><div class="info"><h3>GREGORY "ITALIANO"</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Jimmy+Hunter" alt="Jimmy Hunter"><div class="info"><h3>JIMMY HUNTER</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=The+Knight" alt="The Knight"><div class="info"><h3>THE KNIGHT</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Lawrence+Hunter" alt="Lawrence Hunter"><div class="info"><h3>LAWRENCE HUNTER</h3><p>—</p></div></div>
+    </div>
+</div>
+
+<a href="wrestling.html" class="back-btn">Zurück zur FuB Wrestling Übersicht</a>
+
 <footer>
-    © 2025 Ficken Und Bahn – FuB RAW | Montag Nacht ist Krieg
+    © 2025 Ficken Und Bahn – FuB RAW | The Red Brand
 </footer>
 
 </body>
