@@ -3,237 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FuB NXT – The Future is NOW</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>FuB NXT – The Future is Now</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root{
-            --purple:#8E44AD;
-            --neon:#F1C40F;
+            --yellow:#F1C40F;
+            --white:#FFFFFF;
             --black:#000;
-            --dark:#111;
             --gray:#1a1a1a;
+            --darkgray:#111
         }
         *{margin:0;padding:0;box-sizing:border-box}
-        body{
-            font-family:'Roboto',sans-serif;
-            background:var(--black);
-            color:#fff;
-            overflow-x:hidden;
-        }
-        .container{max-width:1300px;margin:0 auto;padding:0 20px}
+        body{font-family:'Roboto',sans-serif;background:var(--black);color:var(--white)}
+        .container{max-width:1300px;margin:0 auto;padding:20px}
 
-        /* Header */
-        header{
-            background:linear-gradient(135deg,var(--purple),#2C3E50);
-            padding:20px 0;
-            box-shadow:0 10px 30px rgba(142,68,173,.6);
-            position:sticky;top:0;z-index:1000;
-        }
-        .header-content{
-            display:flex;justify-content:space-between;align-items:center;
-            max-width:1300px;margin:0 auto;padding:0 20px;
-        }
-        .logo{
-            font-family:'Bebas Neue',sans-serif;
-            font-size:3.5rem;
-            color:#fff;
-            text-shadow:0 0 20px var(--neon),0 0 40px var(--purple);
-            letter-spacing:5px;
-        }
-        nav a{
-            color:#fff;
-            text-decoration:none;
-            margin:0 20px;
-            font-weight:700;
-            font-size:1.1rem;
-            text-transform:uppercase;
-            position:relative;
-            transition:.3s;
-        }
-        nav a:hover{
-            color:var(--neon);
-            text-shadow:0 0 15px var(--neon);
-        }
+        header{background:var(--yellow);padding:20px 0;box-shadow:0 8px 30px rgba(241,196,15,.6);color:var(--black)}
+        .header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+        .logo h1{font-family:'Bebas Neue';font-size:4.5rem;color:var(--black);letter-spacing:6px;text-shadow:0 0 20px var(--white)}
+        nav a{color:var(--black);font-weight:bold;font-size:1.2rem;margin:0 15px;padding:10px 20px;border:2px solid var(--black);border-radius:8px;text-decoration:none;transition:.3s}
+        nav a:hover{background:var(--black);color:var(--yellow)}
 
-        /* Hero */
-        .hero{
-            height:90vh;
-            background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),url('https://via.placeholder.com/1920x1080/111/8E44AD?text=NXT+ACTION') center/cover no-repeat;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            text-align:center;
-            position:relative;
-        }
-        .hero::after{
-            content:'';position:absolute;inset:0;
-            background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(241,196,15,.03) 10px,rgba(241,196,15,.03) 20px);
-            pointer-events:none;
-        }
-        .hero-content h1{
-            font-family:'Bebas Neue',sans-serif;
-            font-size:7rem;
-            color:var(--neon);
-            text-shadow:0 0 30px #000,0 0 60px var(--purple);
-            animation:pulse 3s infinite;
-        }
-        @keyframes pulse{
-            0%,100%{text-shadow:0 0 30px #000,0 0 60px var(--purple)}
-            50%{text-shadow:0 0 50px #000,0 0 100px var(--neon)}
-        }
-        .cta-btn{
-            display:inline-block;
-            margin:30px 15px;
-            padding:18px 40px;
-            background:var(--neon);
-            color:#000;
-            font-weight:bold;
-            font-size:1.4rem;
-            border-radius:50px;
-            text-decoration:none;
-            box-shadow:0 10px 30px rgba(241,196,15,.4);
-            transition:.4s;
-        }
-        .cta-btn:hover{
-            transform:scale(1.1);
-            box-shadow:0 20px 50px rgba(241,196,15,.8);
-        }
+        .hero{height:90vh;background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),url('https://via.placeholder.com/1920x1080/111/fff?text=NXT+HERO') center/cover;display:flex;align-items:center;justify-content:center;text-align:center}
+        .hero h2{font-family:'Bebas Neue';font-size:7rem;color:var(--yellow);text-shadow:0 0 40px #000}
+        .hero p{font-size:2rem;margin:20px 0}
+        .cta-btn{display:inline-block;padding:18px 50px;background:var(--yellow);color:var(--black);font-size:1.8rem;border-radius:50px;text-decoration:none;margin:15px;transition:.4s}
+        .cta-btn:hover{background:var(--white);color:var(--black);transform:scale(1.1)}
 
-        /* Roster Grid */
-        .section{
-            padding:80px 0;
-        }
-        h2{
-            font-family:'Bebas Neue',sans-serif;
-            font-size:4rem;
-            text-align:center;
-            margin-bottom:60px;
-            color:var(--neon);
-            text-shadow:0 0 0 20px var(--purple);
-        }
-        .roster-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-            gap:30px;
-            padding:0 20px;
-        }
-        .superstar{
-            background:var(--gray);
-            border-radius:15px;
-            overflow:hidden;
-            transition:.4s;
-            border:2px solid transparent;
-            position:relative;
-        }
-        .superstar:hover{
-            transform:translateY(-20px);
-            border-color:var(--neon);
-            box-shadow:0 20px 50px rgba(241,196,15,.4);
-        }
-        .superstar img{
-            width:100%;
-            height:320px;
-            object-fit:cover;
-        }
-        .info{
-            padding:20px;
-            text-align:center;
-        }
-        .info h3{
-            font-size:2rem;
-            margin:10px 0;
-            color:var(--neon);
-        }
-        .info p{
-            color:#aaa;
-            font-size:1rem;
-        }
+        .section{padding:70px 0}
+        h2{font-family:'Bebas Neue';font-size:4.5rem;text-align:center;margin-bottom:50px;color:var(--yellow)}
 
-        footer{
-            background:var(--dark);
-            text-align:center;
-            padding:40px;
-            margin-top:80px;
-            border-top:3px solid var(--purple);
-        }
-        .back{
-            display:inline-block;
-            margin:30px auto;
-            padding:16px 50px;
-            background:var(--purple);
-            color:#fff;
-            font-size:1.5rem;
-            font-weight:bold;
-            border-radius:50px;
-            text-decoration:none;
-            box-shadow:0 10px 30px rgba(142,68,173,.5);
-        }
-        .back:hover{
-            background:var(--neon);
-            color:#000;
-        }
+        .gm-section{background:var(--darkgray);padding:40px;border-radius:15px;text-align:center;margin-bottom:50px;border:4px solid var(--yellow);box-shadow:0 0 30px rgba(241,196,15,.4)}
+        .gm-section h3{font-size:3rem;color:var(--yellow);margin-bottom:20px}
+        .gm-section p{font-size:1.4rem}
+
+        .roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px}
+        .superstar{background:var(--gray);border-radius:15px;overflow:hidden;transition:.4s;box-shadow:0 10px 30px rgba(0,0,0,.5);border:3px solid var(--yellow)}
+        .superstar:hover{transform:translateY(-15px);box-shadow:0 20px 50px rgba(241,196,15,.7);border-color:var(--white)}
+        .superstar img{width:100%;height:400px;object-fit:cover}
+        .info{padding:25px;text-align:center}
+        .info h3{font-family:'Bebas Neue';font-size:2.8rem;color:var(--yellow);margin-bottom:10px}
+        .info p{font-size:1.2rem;color:#ccc}
+
+        .back-btn{display:block;width:320px;margin:60px auto;padding:18px;background:var(--yellow);color:var(--black);text-align:center;border-radius:50px;font-size:1.6rem;border:3px solid var(--white);text-decoration:none;transition:.3s}
+        .back-btn:hover{background:var(--white);color:var(--black)}
+
+        footer{background:var(--darkgray);text-align:center;padding:40px;color:#888}
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-content">
-        <div class="logo">FuB NXT</div>
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>FuB NXT</h1>
+        </div>
         <nav>
             <a href="#roster">Roster</a>
-            <a href="#matches">Matches</a>
-            <a href="#news">News</a>
-            <a href="#merch">Merch</a>
-            <a href="#videos">Videos</a>
-            <a href="#tickets">Tickets</a>
+            <a href="NXTNews.html">News</a>
         </nav>
     </div>
 </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>NXT</h1>
-        <p style="font-size:2rem;margin:20px 0">THE FUTURE IS NOW</p>
-        <a href="#tickets" class="cta-btn">Tickets sichern</a>
-        <a href="#roster" class="cta-btn" style="background:#000;border:3px solid var(--neon)">Roster entdecken</a>
-    </div>
-</section>
-
-<div class="container">
-
-    <section class="section" id="roster">
-        <h2>Current NXT Roster</h2>
-        <div class="roster-grid">
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Rhea+Ripley" alt="Rhea Ripley"><div class="info"><h3>Rhea Ripley</h3><p>The Nightmare</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Tommaso+Ciampa" alt="Tommaso Ciampa"><div class="info"><h3>Tommaso Ciampa</h3><p>Blackheart</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Johnny+Gargano" alt="Johnny Gargano"><div class="info"><h3>Johnny Gargano</h3><p>Rebel Heart</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Jimmy+Uso" alt="Jimmy Uso"><div class="info"><h3>Jimmy Uso</h3><p>The One and Only</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Robert+Roode" alt="Robert Roode"><div class="info"><h3>Robert Roode</h3><p>Glorious</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=R-Truth" alt="R-Truth"><div class="info"><h3>R-Truth</h3><p>The Truth</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Nikki+Cross" alt="Nikki Cross"><div class="info"><h3>Nikki Cross</h3><p>Twisted</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Shotzi" alt="Shotzi"><div class="info"><h3>Shotzi</h3><p>Blackheart</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Piper+Niven" alt="Piper Niven"><div class="info"><h3>Piper Niven</h3><p>Viper</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Grayson+Waller" alt="Grayson Waller"><div class="info"><h3>Grayson Waller</h3><p>The Arrogance</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Indi+Hartwell" alt="Indi Hartwell"><div class="info"><h3>Indi Hartwell</h3><p>#IndiWrestling</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=VALHALLA" alt="VALHALLA"><div class="info"><h3>VALHALLA</h3><p>Viking Queen</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=The+Demon" alt="The Demon"><div class="info"><h3>The Demon</h3><p>Unleashed</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=WOLFGANG" alt="WOLFGANG"><div class="info"><h3>WOLFGANG</h3><p>Beast from Scotland</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Jonatham+Montgomery" alt="Jonatham Montgomery"><div class="info"><h3>Jonatham Montgomery</h3><p>The Prodigy</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=The+Saint+Patrick" alt="The Saint Patrick"><div class="info"><h3>The Saint Patrick</h3><p>Irish Power</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Jayden+Parker" alt="Jayden Parker"><div class="info"><h3>Jayden Parker</h3><p>High Flyer</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Victor+Byrd" alt="Victor Byrd"><div class="info"><h3>Victor Byrd</h3><p>Technical Wizard</p></div></div>
-            <div class="superstar"><img src="https://via.placeholder.com/400x600/111/8E44AD?text=Young+Blood" alt="Young Blood"><div class="info"><h3>Young Blood</h3><p>Next Generation</p></div></div>
-        </div>
-    </section>
-
-    <div style="text-align:center">
-        <a href="wrestling.html" class="back">Zurück zur Wrestling-Übersicht</a>
-    </div>
-
+<div class="hero">
+    <h2>NXT</h2>
+    <p>THE FUTURE IS NOW</p>
+    <a href="#roster" class="cta-btn">ZUM ROSTER</a>
 </div>
 
+<div class="container section">
+    <div class="gm-section">
+        <h3>General Manager</h3>
+        <p><strong>Mohamad Taylor</strong></p>
+    </div>
+</div>
+
+<div class="container section" id="roster">
+    <h2>NXT Roster</h2>
+    <div class="roster-grid">
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Rhea+Ripley" alt="Rhea Ripley"><div class="info"><h3>RHEA RIPLEY</h3><p>Nightmare</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Tomasso+Ciampa" alt="Tomasso Ciampa"><div class="info"><h3>TOMASSO CIAMPA</h3><p>Blackheart</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Johnny+Gargano" alt="Johnny Gargano"><div class="info"><h3>JOHNNY GARGANO</h3><p>Johnny Wrestling</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Jimmy+Uso" alt="Jimmy Uso"><div class="info"><h3>JIMMY USO</h3><p>Uce</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Robert+Roode" alt="Robert Roode"><div class="info"><h3>ROBERT ROODE</h3><p>Glorious</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=R-Truth" alt="R-Truth"><div class="info"><h3>R-TRUTH</h3><p>The Truth</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Nikki+Cross" alt="Nikki Cross"><div class="info"><h3>NIKKI CROSS</h3><p>Twisted</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Shotzi" alt="Shotzi"><div class="info"><h3>SHOTZI</h3><p>Ballsy</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Piper+Niven" alt="Piper Niven"><div class="info"><h3>PIPER NIVEN</h3><p>Scottish Power</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Grayson+Waller" alt="Grayson Waller"><div class="info"><h3>GRAYSON WALLER</h3><p>The Arrogant Aussie</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Indi+Hartwell" alt="Indi Hartwell"><div class="info"><h3>INDI HARTWELL</h3><p>#IndiWrestling</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=VALHALLA" alt="VALHALLA"><div class="info"><h3>VALHALLA</h3><p>Viking Raider</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=The+Demon" alt="The Demon"><div class="info"><h3>THE DEMON</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=WOLFGANG" alt="WOLFGANG"><div class="info"><h3>WOLFGANG</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Jonatham+Montgomery" alt="Jonatham Montgomery"><div class="info"><h3>JONATHAM MONTGOMERY</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=The+Saint+Patrick" alt="The Saint Patrick"><div class="info"><h3>THE SAINT PATRICK</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Jayden+Parker" alt="Jayden Parker"><div class="info"><h3>JAYDEN PARKER</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Victor+Byrd" alt="Victor Byrd"><div class="info"><h3>VICTOR BYRD</h3><p>—</p></div></div>
+        <div class="superstar"><img src="https://via.placeholder.com/600x800/111/fff?text=Young+Blood" alt="Young Blood"><div class="info"><h3>YOUNG BLOOD</h3><p>—</p></div></div>
+    </div>
+</div>
+
+<a href="wrestling.html" class="back-btn">Zurück zur FuB Wrestling Übersicht</a>
+
 <footer>
-    © 2025 Ficken Und Bahn NXT | <a href="index.html">Zur Hauptseite</a>
+    © 2025 Ficken Und Bahn – FuB NXT | The Future is Now
 </footer>
 
 </body>
