@@ -10,17 +10,18 @@
             --red:#D32F2F;
             --gold:#FFD700;
             --black:#000;
+            --white:#fff;
             --gray:#1a1a1a;
             --darkgray:#111
         }
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Roboto',sans-serif;background:var(--black);color:#fff}
+        body{font-family:'Roboto',sans-serif;background:var(--black);color:var(--white)}
         .container{max-width:1100px;margin:0 auto;padding:20px}
 
         header{background:var(--red);padding:20px 0;box-shadow:0 8px 30px rgba(211,47,47,.6)}
         .header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-        .logo h1{font-family:'Bebas Neue';font-size:4.5rem;color:#fff;letter-spacing:6px;text-shadow:0 0 20px var(--gold)}
-        nav a{color:#fff;font-weight:bold;font-size:1.2rem;margin:0 15px;padding:10px 20px;border:2px solid var(--gold);border-radius:8px;text-decoration:none;transition:.3s}
+        .logo h1{font-family:'Bebas Neue';font-size:4.5rem;color:var(--white);letter-spacing:6px;text-shadow:0 0 20px var(--gold)}
+        nav a{color:var(--white);font-weight:bold;font-size:1.2rem;margin:0 15px;padding:10px 20px;border:2px solid var(--gold);border-radius:8px;text-decoration:none;transition:.3s}
         nav a:hover{background:var(--gold);color:var(--black)}
 
         .section{padding:50px 0}
@@ -29,7 +30,7 @@
         .news-article .date{font-size:1.1rem;color:#ccc;margin-bottom:20px}
         .news-article p{font-size:1.3rem;line-height:1.8;margin-bottom:20px}
 
-        .back-btn{display:block;width:320px;margin:60px auto;padding:18px;background:var(--red);color:#fff;text-align:center;border-radius:50px;font-size:1.6rem;border:3px solid var(--gold);text-decoration:none;transition:.3s}
+        .back-btn{display:block;width:320px;margin:60px auto;padding:18px;background:var(--red);color:var(--white);text-align:center;border-radius:50px;font-size:1.6rem;border:3px solid var(--gold);text-decoration:none;transition:.3s}
         .back-btn:hover{background:var(--gold);color:var(--black)}
 
         footer{background:var(--darkgray);text-align:center;padding:40px;color:#888}
@@ -50,10 +51,9 @@
 
 <div class="container section">
 
-    <!-- Neuer Artikel -->
     <div class="news-article">
         <h2>Neuzugang mit Zukunft</h2>
-        <div class="date">02. Januar 2026</div>
+        <div class="date">Januar 2026</div>
         <p><strong>Marijo J. Mandžukić offiziell Teil von Monday Night RAW</strong></p>
         <p>RAW setzt weiter auf die Zukunft: Mit Marijo J. Mandžukić stößt ein junges, vielversprechendes Talent offiziell zum RAW‑Roster. Der Neuzugang steht sinnbildlich für eine neue Generation von Superstars, die bereit ist, sich Schritt für Schritt ihren Platz zu erarbeiten.</p>
         <p>Insider beschreiben Mandžukić als fokussiert, ehrgeizig und lernwillig – genau die Eigenschaften, die bei RAW gefragt sind. Statt großer Worte setzt er auf harte Arbeit und will sich im Ring beweisen, wann immer sich die Gelegenheit bietet.</p>
@@ -64,14 +64,6 @@
         <p>Die Zukunft ist offen.<br>
         Die Chance ist da.<br>
         <strong>Marijo J. Mandžukić ist angekommen bei RAW.</strong></p>
-    </div>
-
-    <!-- Alte Artikel (Platzhalter für bisherige News – falls du welche hast, hier einfügen) -->
-    <!-- Beispiel für einen alten Artikel -->
-    <div class="news-article">
-        <h2>Christian Jenkins übernimmt als General Manager</h2>
-        <div class="date">Dezember 2025</div>
-        <p>Christian Jenkins ist neuer General Manager von RAW. Mit seiner Erfahrung und Vision soll er die rote Brand in eine neue Ära führen.</p>
     </div>
 
 </div>
