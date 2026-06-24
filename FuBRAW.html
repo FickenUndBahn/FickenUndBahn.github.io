@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuB RAW – Montag Nacht ist Krieg</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--red:#D32F2F;--white:#FFFFFF;--gold:#FFD700;--black:#000;--gray:#1a1a1a}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Roboto',sans-serif;background:var(--black);color:var(--white)}
+        .container{max-width:1300px;margin:0 auto;padding:20px}
+        header{background:var(--red);padding:20px 0;box-shadow:0 8px 30px rgba(211,47,47,.6)}
+        .header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+        .logo h1{font-family:'Bebas Neue';font-size:4.5rem;color:var(--white);letter-spacing:6px;text-shadow:0 0 20px var(--gold)}
+        nav a{color:var(--white);font-weight:bold;font-size:1.2rem;margin:0 15px;padding:10px 20px;border:2px solid var(--gold);border-radius:8px;text-decoration:none;transition:.3s}
+        nav a:hover{background:var(--gold);color:var(--black)}
+        .hero{height:90vh;background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),url('https://via.placeholder.com/1920x1080/111/fff?text=RAW+HERO') center/cover;display:flex;align-items:center;justify-content:center;text-align:center}
+        .hero h2{font-family:'Bebas Neue';font-size:7rem;color:var(--red);text-shadow:0 0 40px #000}
+        .hero p{font-size:2rem;margin:20px 0}
+        .cta-btn{display:inline-block;padding:18px 50px;background:var(--red);color:var(--white);font-size:1.8rem;border-radius:50px;text-decoration:none;margin:15px;transition:.4s}
+        .cta-btn:hover{background:var(--white);color:var(--red);transform:scale(1.1)}
+        .section{padding:70px 0}
+        h2{font-family:'Bebas Neue';font-size:4.5rem;text-align:center;margin-bottom:50px;color:var(--red)}
+        .gm-section{background:var(--gray);padding:40px;border-radius:15px;text-align:center;margin-bottom:50px;border:4px solid var(--red);box-shadow:0 0 30px rgba(211,47,47,.4)}
+        .gm-section h3{font-size:3rem;color:var(--red);margin-bottom:20px}
+        .gm-section p{font-size:1.4rem}
+        .roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px}
+        .superstar{background:var(--gray);border-radius:15px;overflow:hidden;transition:.4s;box-shadow:0 10px 30px rgba(0,0,0,.5);border:3px solid var(--red)}
+        .superstar:hover{transform:translateY(-15px);box-shadow:0 20px 50px rgba(211,47,47,.7);border-color:var(--gold)}
+        .superstar img{width:100%;height:400px;object-fit:cover}
+        .info{padding:25px;text-align:center}
+        .info h3{font-family:'Bebas Neue';font-size:2.8rem;color:var(--red);margin-bottom:10px}
+        .info p{font-size:1.2rem;color:#ccc}
+        .back-btn{display:block;width:320px;margin:60px auto;padding:18px;background:var(--red);color:var(--white);text-align:center;border-radius:50px;font-size:1.6rem;border:3px solid var(--gold);text-decoration:none;transition:.3s}
+        .back-btn:hover{background:var(--gold);color:var(--black)}
+        footer{background:var(--gray);text-align:center;padding:40px;color:#888}
+    </style>
+</head>
+<body>
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>FuB RAW</h1>
+        </div>
+        <nav>
+            <a href="#roster">Roster</a>
+            <a href="RawNews.html">News</a>
+            <a href="#merch">Merch</a>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <h2>MONDAY NIGHT RAW</h2>
+    <p>THE RED BRAND – WHERE LEGENDS ARE MADE</p>
+    <a href="#roster" class="cta-btn">ZUM ROSTER</a>
+</div>
+
+<div class="container section">
+    <div class="gm-section">
+        <h3>General Manager</h3>
+        <p><strong>Adam Pearce</strong></p>
+    </div>
+</div>
+
+<div class="container section" id="roster">
+    <h2>RAW ROSTER</h2>
+    <div class="roster-grid">
+        <div class="superstar"><img src="AJLee.png" alt="AJ Lee"><div class="info"><h3>AJ LEE</h3><p>The Black Widow</p></div></div>
+        <div class="superstar"><img src="AdrienneShade.png" alt="Adrienne Shade"><div class="info"><h3>ADRIENNE SHADE</h3><p></p></div></div>
+        <div class="superstar"><img src="AustinTheory.png" alt="Austin Theory"><div class="info"><h3>AUSTIN THEORY</h3><p>The Now</p></div></div>
+        <div class="superstar"><img src="BeckyLynch.png" alt="Becky Lynch"><div class="info"><h3>BECKY LYNCH</h3><p>The Man</p></div></div>
+        <div class="superstar"><img src="BronBreakker.png" alt="Bron Breakker"><div class="info"><h3>BRON BREAKKER</h3><p>The Next Big Thing</p></div></div>
+        <div class="superstar"><img src="BronsonReed.png" alt="Bronson Reed"><div class="info"><h3>BRONSON REED</h3><p>The Colossal</p></div></div>
+        <div class="superstar"><img src="BrutusCreed.png" alt="Brutus Creed"><div class="info"><h3>BRUTUS CREED</h3><p></p></div></div>
+        <div class="superstar"><img src="Erik.png" alt="Erik"><div class="info"><h3>ERIK</h3><p>The Viking</p></div></div>
+        <div class="superstar"><img src="CommandantFink.png" alt="Commandant Fin(k)"><div class="info"><h3>COMMANDANT FIN(K)</h3><p></p></div></div>
+        <div class="superstar"><img src="Finlay.png" alt="Finlay"><div class="info"><h3>FINLAY "THE DOMINATOR"</h3><p></p></div></div>
+        <div class="superstar"><img src="FinnBalor.png" alt="Finn Balor"><div class="info"><h3>FINN BALOR</h3><p>The Prince</p></div></div>
+        <div class="superstar"><img src="Gunther.png" alt="Gunther"><div class="info"><h3>GUNTHER</h3><p>The Ring General</p></div></div>
+        <div class="superstar"><img src="IvyNile.png" alt="Ivy Nile"><div class="info"><h3>IVY NILE</h3><p></p></div></div>
+        <div class="superstar"><img src="IyoSky.png" alt="Iyo Sky"><div class="info"><h3>IYO SKY</h3><p>Genius of the Sky</p></div></div>
+        <div class="superstar"><img src="JacobFatu.png" alt="Jacob Fatu"><div class="info"><h3>JACOB FATU</h3><p>The Samoan Werewolf</p></div></div>
+        <div class="superstar"><img src="JeyUso.png" alt="Jey Uso"><div class="info"><h3>JEY USO</h3><p>Main Event Jey</p></div></div>
+        <div class="superstar"><img src="JimmyUso.png" alt="Jimmy Uso"><div class="info"><h3>JIMMY USO</h3><p></p></div></div>
+        <div class="superstar"><img src="JohnnyGargano.png" alt="Johnny Gargano"><div class="info"><h3>JOHNNY GARGANO</h3><p>Johnny Wrestling</p></div></div>
+        <div class="superstar"><img src="JuliusCreed.png" alt="Julius Creed"><div class="info"><h3>JULIUS CREED</h3><p></p></div></div>
+        <div class="superstar"><img src="KairiSane.png" alt="Kairi Sane"><div class="info"><h3>KAIRI SANE</h3><p>The Pirate Princess</p></div></div>
+        <div class="superstar"><img src="KofiKingston.png" alt="Kofi Kingston"><div class="info"><h3>KOFI KINGSTON</h3><p>The New Day</p></div></div>
+        <div class="superstar"><img src="LivMorgan.png" alt="Liv Morgan"><div class="info"><h3>LIV MORGAN</h3><p></p></div></div>
+        <div class="superstar"><img src="LoganPaul.png" alt="Logan Paul"><div class="info"><h3>LOGAN PAUL</h3><p>The United States Champion</p></div></div>
+        <div class="superstar"><img src="LudwigKaiser.png" alt="Ludwig Kaiser"><div class="info"><h3>LUDWIG KAISER</h3><p></p></div></div>
+        <div class="superstar"><img src="LyraValkyria.png" alt="Lyra Valkyria"><div class="info"><h3>LYRA VALKYRIA</h3><p></p></div></div>
+        <div class="superstar"><img src="MarijoJMandzukic.png" alt="Marijo J. Mandzukic"><div class="info"><h3>MARIJO J. MANDZUKIC</h3><p></p></div></div>
+        <div class="superstar"><img src="MaxxineDupri.png" alt="Maxxine Dupri"><div class="info"><h3>MAXXINE DUPRI</h3><p></p></div></div>
+        <div class="superstar"><img src="Naomi.png" alt="Naomi"><div class="info"><h3>NAOMI</h3><p>The Glow</p></div></div>
+        <div class="superstar"><img src="Natalya.png" alt="Natalya"><div class="info"><h3>NATALYA</h3><p>The Queen of Harts</p></div></div>
+        <div class="superstar"><img src="NikkiBella.png" alt="Nikki Bella"><div class="info"><h3>NIKKI BELLA</h3><p></p></div></div>
+        <div class="superstar"><img src="OMOS.png" alt="OMOS"><div class="info"><h3>OMOS</h3><p>The Nigerian Giant</p></div></div>
+        <div class="superstar"><img src="ObaFemi.png" alt="Oba Femi"><div class="info"><h3>OBA FEMI</h3><p></p></div></div>
+        <div class="superstar"><img src="R-Truth.png" alt="R-Truth"><div class="info"><h3>R-TRUTH</h3><p></p></div></div>
+        <div class="superstar"><img src="Penta.png" alt="Penta"><div class="info"><h3>PENTA</h3><p>Zero Miedo</p></div></div>
+        <div class="superstar"><img src="RaquelRodriguez.png" alt="Raquel Rodriguez"><div class="info"><h3>RAQUEL RODRIGUEZ</h3><p>The Strong</p></div></div>
+        <div class="superstar"><img src="RheaRipley.png" alt="Rhea Ripley"><div class="info"><h3>RHEA RIPLEY</h3><p>Mami</p></div></div>
+        <div class="superstar"><img src="RoxannePerez.png" alt="Roxanne Perez"><div class="info"><h3>ROXANNE PEREZ</h3><p></p></div></div>
+        <div class="superstar"><img src="Rusev.png" alt="Rusev"><div class="info"><h3>RUSEV</h3><p>The Bulgarian Brute</p></div></div>
+        <div class="superstar"><img src="SethRollins.png" alt="Seth Rollins"><div class="info"><h3>SETH ROLLINS</h3><p>The Visionary</p></div></div>
+        <div class="superstar"><img src="Sheamus.png" alt="Sheamus"><div class="info"><h3>SHEAMUS</h3><p>The Celtic Warrior</p></div></div>
+        <div class="superstar"><img src="SolRuca.png" alt="Sol Ruca"><div class="info"><h3>SOL RUCA</h3><p></p></div></div>
+        <div class="superstar"><img src="StephanieVaquer.png" alt="Stephanie Vaquer"><div class="info"><h3>STEPHANIE VAQUER</h3><p></p></div></div>
+        <div class="superstar"><img src="TheLunatic.png" alt="The Lunatic"><div class="info"><h3>THE LUNATIC</h3><p></p></div></div>
+        <div class="superstar"><img src="TommasoCiampa.png" alt="Tommaso Ciampa"><div class="info"><h3>TOMMASO CIAMPA</h3><p>The Blackheart</p></div></div>
+        <div class="superstar"><img src="TylerBate.png" alt="Tyler Bate"><div class="info"><h3>TYLER BATE</h3><p>Big Strong Boy</p></div></div>
+        <div class="superstar"><img src="XavierWoods.png" alt="Xavier Woods"><div class="info"><h3>XAVIER WOODS</h3><p>The New Day</p></div></div>
+        <div class="superstar"><img src="ZoeyStark.png" alt="Zoey Stark"><div class="info"><h3>ZOEY STARK</h3><p></p></div></div>
+    </div>
+</div>
+
+<a href="wrestling.html" class="back-btn">← Zurück zur FuB Wrestling Übersicht</a>
+
+<footer>
+    © 2025 Ficken Und Bahn – FuB RAW | Alle Rechte vorbehalten
+</footer>
+</body>
+</html>
