@@ -10,6 +10,7 @@
             --nxt: #ffd700;
             --sd: #0066ff;
             --aaa: #00cc00;
+            --other: #9d00ff; /* Lila für "Andere" */
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
        
@@ -97,6 +98,7 @@
         .nxt h3 { color: var(--nxt); border-bottom: 4px solid var(--nxt); }
         .smackdown h3 { color: var(--sd); border-bottom: 4px solid var(--sd); }
         .aaa h3 { color: var(--aaa); border-bottom: 4px solid var(--aaa); }
+        .other h3 { color: var(--other); border-bottom: 4px solid var(--other); }
 
         .show-card p {
             margin: 20px 0;
@@ -122,19 +124,17 @@
             transform: scale(1.05);
         }
 
-        /* === ACCORDION STYLES === */
+        /* Accordion Styles (unverändert) */
         .accordion {
             max-width: 900px;
             margin: 40px auto 20px;
         }
-
         .accordion-item {
             margin-bottom: 12px;
             border: 2px solid #333;
             border-radius: 8px;
             overflow: hidden;
         }
-
         .accordion-header {
             width: 100%;
             padding: 18px 25px;
@@ -147,11 +147,9 @@
             cursor: pointer;
             transition: 0.3s;
         }
-
         .accordion-header:hover {
             background: #ff0000;
         }
-
         .accordion-content {
             padding: 0 25px;
             background: #1a1a1a;
@@ -159,13 +157,11 @@
             overflow: hidden;
             transition: max-height 0.4s ease-out;
         }
-
         .accordion-content p {
             padding: 12px 0;
             border-bottom: 1px solid #333;
             margin: 0;
         }
-
         .accordion-content p:last-child {
             border-bottom: none;
         }
@@ -181,7 +177,6 @@
             text-decoration: none;
             transition: 0.3s;
         }
-
         .back-btn:hover {
             background: #cc0000;
             transform: scale(1.05);
@@ -226,10 +221,16 @@
                     <p>Lucha Libre AAA Worldwide – Hochfliegend, explosiv & mexikanisch!</p>
                     <a href="AAA.html">Zu AAA</a>
                 </div>
+                <!-- NEUE KARTE -->
+                <div class="show-card other">
+                    <h3>ANDERE</h3>
+                    <p>Special Events, House Shows & mehr</p>
+                    <a href="andere.html">Zu Andere</a>
+                </div>
             </div>
         </div>
 
-        <!-- === TITEL BEREICH === -->
+        <!-- Titel Bereich (unverändert) -->
         <div class="section">
             <h2>Aktuelle Titel</h2>
             <div class="accordion">
@@ -288,17 +289,13 @@
         Fan-Projekt • Nicht offiziell mit WWE oder AAA verbunden
     </footer>
 
-    <!-- JavaScript für das Ausklappen -->
     <script>
         document.querySelectorAll('.accordion-header').forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
-                
-                // Schließe alle anderen
                 document.querySelectorAll('.accordion-content').forEach(item => {
                     if (item !== content) item.style.maxHeight = null;
                 });
-
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                 } else {
