@@ -16,26 +16,21 @@
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Roboto',sans-serif;background:var(--black);color:var(--white)}
         .container{max-width:1300px;margin:0 auto;padding:20px}
-
         header{background:var(--yellow);padding:20px 0;box-shadow:0 8px 30px rgba(241,196,15,.6);color:var(--black)}
         .header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
         .logo h1{font-family:'Bebas Neue';font-size:4.5rem;color:var(--black);letter-spacing:6px;text-shadow:0 0 20px var(--white)}
         nav a{color:var(--black);font-weight:bold;font-size:1.2rem;margin:0 15px;padding:10px 20px;border:2px solid var(--black);border-radius:8px;text-decoration:none;transition:.3s}
         nav a:hover{background:var(--black);color:var(--yellow)}
-
         .hero{height:90vh;background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),url('https://via.placeholder.com/1920x1080/111/fff?text=NXT+HERO') center/cover;display:flex;align-items:center;justify-content:center;text-align:center}
         .hero h2{font-family:'Bebas Neue';font-size:7rem;color:var(--yellow);text-shadow:0 0 40px #000}
         .hero p{font-size:2rem;margin:20px 0}
         .cta-btn{display:inline-block;padding:18px 50px;background:var(--yellow);color:var(--black);font-size:1.8rem;border-radius:50px;text-decoration:none;margin:15px;transition:.4s}
         .cta-btn:hover{background:var(--white);color:var(--black);transform:scale(1.1)}
-
         .section{padding:70px 0}
         h2{font-family:'Bebas Neue';font-size:4.5rem;text-align:center;margin-bottom:50px;color:var(--yellow)}
-
         .gm-section{background:var(--darkgray);padding:40px;border-radius:15px;text-align:center;margin-bottom:50px;border:4px solid var(--yellow);box-shadow:0 0 30px rgba(241,196,15,.4)}
         .gm-section h3{font-size:3rem;color:var(--yellow);margin-bottom:20px}
         .gm-section p{font-size:1.4rem}
-
         .roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px}
         .superstar{background:var(--gray);border-radius:15px;overflow:hidden;transition:.4s;box-shadow:0 10px 30px rgba(0,0,0,.5);border:3px solid var(--yellow)}
         .superstar:hover{transform:translateY(-15px);box-shadow:0 20px 50px rgba(241,196,15,.7);border-color:var(--white)}
@@ -43,15 +38,12 @@
         .info{padding:25px;text-align:center}
         .info h3{font-family:'Bebas Neue';font-size:2.8rem;color:var(--yellow);margin-bottom:10px}
         .info p{font-size:1.2rem;color:#ccc}
-
         .back-btn{display:block;width:320px;margin:60px auto;padding:18px;background:var(--yellow);color:var(--black);text-align:center;border-radius:50px;font-size:1.6rem;border:3px solid var(--white);text-decoration:none;transition:.3s}
         .back-btn:hover{background:var(--white);color:var(--black)}
-
         footer{background:var(--darkgray);text-align:center;padding:40px;color:#888}
     </style>
 </head>
 <body>
-
 <header>
     <div class="container header-inner">
         <div class="logo">
@@ -80,33 +72,55 @@
 <div class="container section" id="roster">
     <h2>NXT Roster</h2>
     <div class="roster-grid">
-        <div class="superstar"><img src="RheaRipley.png" alt="Rhea Ripley"><div class="info"><h3>RHEA RIPLEY</h3><p>Nightmare</p></div></div>
-        <div class="superstar"><img src="TomassoCiampa.png" alt="Tomasso Ciampa"><div class="info"><h3>TOMASSO CIAMPA</h3><p>Blackheart</p></div></div>
-        <div class="superstar"><img src="JohnnyGargano.png" alt="Johnny Gargano"><div class="info"><h3>JOHNNY GARGANO</h3><p>Johnny Wrestling</p></div></div>
-        <div class="superstar"><img src="JimmyUso.png" alt="Jimmy Uso"><div class="info"><h3>JIMMY USO</h3><p>Uce</p></div></div>
-        <div class="superstar"><img src="RobertRoode.png" alt="Robert Roode"><div class="info"><h3>ROBERT ROODE</h3><p>Glorious</p></div></div>
-        <div class="superstar"><img src="RTruth.png" alt="R-Truth"><div class="info"><h3>R-TRUTH</h3><p>The Truth</p></div></div>
-        <div class="superstar"><img src="NikkiCross.png" alt="Nikki Cross"><div class="info"><h3>NIKKI CROSS</h3><p>Twisted</p></div></div>
-        <div class="superstar"><img src="Shotzi.png" alt="Shotzi"><div class="info"><h3>SHOTZI</h3><p>Ballsy</p></div></div>
-        <div class="superstar"><img src="PiperNiven.png" alt="Piper Niven"><div class="info"><h3>PIPER NIVEN</h3><p>Scottish Power</p></div></div>
-        <div class="superstar"><img src="GraysonWaller.png" alt="Grayson Waller"><div class="info"><h3>GRAYSON WALLER</h3><p>The Arrogant Aussie</p></div></div>
-        <div class="superstar"><img src="IndiHartwell.png" alt="Indi Hartwell"><div class="info"><h3>INDI HARTWELL</h3><p>#IndiWrestling</p></div></div>
-        <div class="superstar"><img src="VALHALLA.png" alt="VALHALLA"><div class="info"><h3>VALHALLA</h3><p>Viking Raider</p></div></div>
-        <div class="superstar"><img src="TheDemon.png" alt="The Demon"><div class="info"><h3>THE DEMON</h3><p>—</p></div></div>
-        <div class="superstar"><img src="WOLFGANG.png" alt="WOLFGANG"><div class="info"><h3>WOLFGANG</h3><p>—</p></div></div>
-        <div class="superstar"><img src="JonathamMontgomery.png" alt="Jonatham Montgomery"><div class="info"><h3>JONATHAM MONTGOMERY</h3><p>—</p></div></div>
-        <div class="superstar"><img src="TheSaintPatrick.png" alt="The Saint Patrick"><div class="info"><h3>THE SAINT PATRICK</h3><p>—</p></div></div>
-        <div class="superstar"><img src="JaydenParker.png" alt="Jayden Parker"><div class="info"><h3>JAYDEN PARKER</h3><p>—</p></div></div>
-        <div class="superstar"><img src="VictorByrd.png" alt="Victor Byrd"><div class="info"><h3>VICTOR BYRD</h3><p>—</p></div></div>
-        <div class="superstar"><img src="YoungBlood.png" alt="Young Blood"><div class="info"><h3>YOUNG BLOOD</h3><p>—</p></div></div>
+        <div class="superstar"><img src="AndreChase.png" alt="Andre Chase"><div class="info"><h3>ANDRE CHASE</h3><p>Chase U</p></div></div>
+        <div class="superstar"><img src="Azrael.png" alt="Azrael"><div class="info"><h3>AZRAEL</h3><p></p></div></div>
+        <div class="superstar"><img src="BlakeMonroe.png" alt="Blake Monroe"><div class="info"><h3>BLAKE MONROE</h3><p></p></div></div>
+        <div class="superstar"><img src="BradBaylor.png" alt="Brad Baylor"><div class="info"><h3>BRAD BAYLOR</h3><p></p></div></div>
+        <div class="superstar"><img src="ChanningStacksLorenzo.png" alt="Channing Stacks Lorenzo"><div class="info"><h3>CHANNING "STACKS" LORENZO</h3><p>The Underboss</p></div></div>
+        <div class="superstar"><img src="CharlieDempsey.png" alt="Charlie Dempsey"><div class="info"><h3>CHARLIE DEMPSEY</h3><p>The Technical Wizard</p></div></div>
+        <div class="superstar"><img src="EricSorensen.png" alt="Eric Sorensen"><div class="info"><h3>ERIC SORENSEN</h3><p>Der Fliegende Hüter</p></div></div>
+        <div class="superstar"><img src="EthanPage.png" alt="Ethan Page"><div class="info"><h3>ETHAN PAGE</h3><p>All Ego</p></div></div>
+        <div class="superstar"><img src="FallonHenley.png" alt="Fallon Henley"><div class="info"><h3>FALLON HENLEY</h3><p>The Cowgirl</p></div></div>
+        <div class="superstar"><img src="FinchRusell.png" alt="Finch Rusell"><div class="info"><h3>FINCH RUSELL</h3><p></p></div></div>
+        <div class="superstar"><img src="Frost.png" alt="Frost"><div class="info"><h3>FROST</h3><p></p></div></div>
+        <div class="superstar"><img src="HankWalker.png" alt="Hank Walker"><div class="info"><h3>HANK WALKER</h3><p></p></div></div>
+        <div class="superstar"><img src="IzziDame.png" alt="Izzi Dame"><div class="info"><h3>IZZI DAME</h3><p></p></div></div>
+        <div class="superstar"><img src="JacyJane.png" alt="Jacy Jane"><div class="info"><h3>JACY JANE</h3><p></p></div></div>
+        <div class="superstar"><img src="JoeHendry.png" alt="Joe Hendry"><div class="info"><h3>JOE HENDRY</h3><p>I Believe</p></div></div>
+        <div class="superstar"><img src="JoshBriggs.png" alt="Josh Briggs"><div class="info"><h3>JOSH BRIGGS</h3><p></p></div></div>
+        <div class="superstar"><img src="KarmenPetrovic.png" alt="Karmen Petrovic"><div class="info"><h3>KARMEN PETROVIC</h3><p></p></div></div>
+        <div class="superstar"><img src="KelaniJordan.png" alt="Kelani Jordan"><div class="info"><h3>KELANI JORDAN</h3><p>The Princess of NXT</p></div></div>
+        <div class="superstar"><img src="LeeRoberts.png" alt="Lee Roberts"><div class="info"><h3>LEE ROBERTS</h3><p></p></div></div>
+        <div class="superstar"><img src="LexisKing.png" alt="Lexis King"><div class="info"><h3>LEXIS KING</h3><p>The King</p></div></div>
+        <div class="superstar"><img src="LoganBell.png" alt="Logan Bell"><div class="info"><h3>LOGAN BELL</h3><p></p></div></div>
+        <div class="superstar"><img src="LolaVice.png" alt="Lola Vice"><div class="info"><h3>LOLA VICE</h3><p>Miss Vice</p></div></div>
+        <div class="superstar"><img src="Malcolm.png" alt="Malcolm"><div class="info"><h3>MALCOLM</h3><p></p></div></div>
+        <div class="superstar"><img src="MartyMontana.png" alt="Marty Montana"><div class="info"><h3>MARTY MONTANA</h3><p></p></div></div>
+        <div class="superstar"><img src="MikeHarvey.png" alt="Mike Harvey"><div class="info"><h3>MIKE HARVEY</h3><p></p></div></div>
+        <div class="superstar"><img src="MylesBorne.png" alt="Myles Borne"><div class="info"><h3>MYLES BORNE</h3><p></p></div></div>
+        <div class="superstar"><img src="SettTheSyer.png" alt="Sett The Syer"><div class="info"><h3>SETT THE SYER</h3><p></p></div></div>
+        <div class="superstar"><img src="ShawnSpears.png" alt="Shawn Spears"><div class="info"><h3>SHAWN SPEARS</h3><p>Perfect 10</p></div></div>
+        <div class="superstar"><img src="SilasSparks.png" alt="Silas Sparks"><div class="info"><h3>SILAS SPARKS</h3><p></p></div></div>
+        <div class="superstar"><img src="TaliaTanaka.png" alt="Talia Tanaka"><div class="info"><h3>TALIA TANAKA</h3><p></p></div></div>
+        <div class="superstar"><img src="TankLedger.png" alt="Tank Ledger"><div class="info"><h3>TANK LEDGER</h3><p></p></div></div>
+        <div class="superstar"><img src="TatumPaxley.png" alt="Tatum Paxley"><div class="info"><h3>TATUM PAXLEY</h3><p>The Twisted</p></div></div>
+        <div class="superstar"><img src="TheLightning.png" alt="The Lightning"><div class="info"><h3>THE LIGHTNING</h3><p></p></div></div>
+        <div class="superstar"><img src="TavionHeights.png" alt="Tavion Heights"><div class="info"><h3>TAVION HEIGHTS</h3><p>The Olympian</p></div></div>
+        <div class="superstar"><img src="TheaHail.png" alt="Thea Hail"><div class="info"><h3>THEA HAIL</h3><p></p></div></div>
+        <div class="superstar"><img src="TonyDAngelo.png" alt="Tony D'Angelo"><div class="info"><h3>TONY D'ANGELO</h3><p>The Don</p></div></div>
+        <div class="superstar"><img src="WendyChoo.png" alt="Wendy Choo"><div class="info"><h3>WENDY CHOO</h3><p>The Korean American Princess</p></div></div>
+        <div class="superstar"><img src="WrenSinclair.png" alt="Wren Sinclair"><div class="info"><h3>WREN SINCLAIR</h3><p>Miss Reality</p></div></div>
+        <div class="superstar"><img src="YoshikiInamura.png" alt="Yoshiki Inamura"><div class="info"><h3>YOSHIKI INAMURA</h3><p>The Japanese Giant</p></div></div>
+        <div class="superstar"><img src="Zaria.png" alt="Zaria"><div class="info"><h3>ZARIA</h3><p></p></div></div>
+        <div class="superstar"><img src="ZillaFatu.png" alt="Zilla Fatu"><div class="info"><h3>ZILLA FATU</h3><p></p></div></div>
+        <div class="superstar"><img src="KimberleyAnnHart.png" alt="Kimberley Ann Hart"><div class="info"><h3>KIMBERLEY ANN HART</h3><p></p></div></div>
     </div>
 </div>
 
-<a href="wrestling.html" class="back-btn">Zurück zur FuB Wrestling Übersicht</a>
+<a href="wrestling.html" class="back-btn">← Zurück zur FuB Wrestling Übersicht</a>
 
 <footer>
     © 2025 Ficken Und Bahn – FuB NXT | The Future is Now
 </footer>
-
 </body>
 </html>
