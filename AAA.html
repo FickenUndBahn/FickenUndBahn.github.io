@@ -3,113 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FuB ECW – Hardcore is Back</title>
+    <title>FuB AAA – Lucha Libre AAA Worldwide</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root{
-            --violet:#9d00ff;
+            --green: #00cc00;
+            --white:#FFFFFF;
             --black:#000;
-            --white:#fff;
             --gray:#1a1a1a;
             --darkgray:#111
         }
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Roboto',sans-serif;background:var(--black);color:var(--white)}
         .container{max-width:1300px;margin:0 auto;padding:20px}
+        
+        header{
+            background:var(--green);
+            padding:20px 0;
+            box-shadow:0 8px 30px rgba(0,204,0,.6);
+            color:var(--black);
+        }
+        .header-inner{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .logo h1{
+            font-family:'Bebas Neue';
+            font-size:4.5rem;
+            color:var(--black);
+            letter-spacing:6px;
+            text-shadow:0 0 20px var(--white);
+        }
+        nav a{
+            color:var(--black);
+            font-weight:bold;
+            font-size:1.2rem;
+            margin:0 15px;
+            padding:10px 20px;
+            border:2px solid var(--black);
+            border-radius:8px;
+            text-decoration:none;
+            transition:.3s;
+        }
+        nav a:hover{
+            background:var(--black);
+            color:var(--green);
+        }
 
-        header{background:var(--violet);padding:20px 0;box-shadow:0 8px 30px rgba(157,0,255,.6)}
-        .header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-        .logo h1{font-family:'Bebas Neue';font-size:4.5rem;color:var(--white);letter-spacing:6px;text-shadow:0 0 20px var(--violet)}
-        nav a{color:var(--white);font-weight:bold;font-size:1.2rem;margin:0 15px;padding:10px 20px;border:2px solid var(--violet);border-radius:8px;text-decoration:none;transition:.3s}
-        nav a:hover{background:var(--violet);color:var(--black)}
+        .hero{
+            height:90vh;
+            background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)), 
+                        url('https://via.placeholder.com/1920x1080/006600/fff?text=AAA+LUCHA+HERO') center/cover;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+        }
+        .hero h2{
+            font-family:'Bebas Neue';
+            font-size:7rem;
+            color:var(--green);
+            text-shadow:0 0 40px #000;
+        }
+        .hero p{
+            font-size:2rem;
+            margin:20px 0;
+        }
 
-        .hero{height:90vh;background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),url('https://via.placeholder.com/1920x1080/111/9d00ff?text=ECW+HARDCORE') center/cover;display:flex;align-items:center;justify-content:center;text-align:center}
-        .hero h2{font-family:'Bebas Neue';font-size:7rem;color:var(--violet);text-shadow:0 0 40px #000}
-        .hero p{font-size:2rem;margin:20px 0}
-        .cta-btn{display:inline-block;padding:18px 50px;background:var(--violet);color:var(--white);font-size:1.8rem;border-radius:50px;text-decoration:none;margin:15px;transition:.4s}
-        .cta-btn:hover{background:var(--white);color:var(--violet);transform:scale(1.1)}
+        .cta-btn{
+            display:inline-block;
+            padding:18px 50px;
+            background:var(--green);
+            color:var(--black);
+            font-size:1.8rem;
+            border-radius:50px;
+            text-decoration:none;
+            margin:15px;
+            transition:.4s;
+        }
+        .cta-btn:hover{
+            background:var(--white);
+            color:var(--black);
+            transform:scale(1.1);
+        }
 
         .section{padding:70px 0}
-        h2{font-family:'Bebas Neue';font-size:4.5rem;text-align:center;margin-bottom:50px;color:var(--violet)}
+        h2{
+            font-family:'Bebas Neue';
+            font-size:4.5rem;
+            text-align:center;
+            margin-bottom:50px;
+            color:var(--green);
+        }
 
-        .gm-section{background:var(--darkgray);padding:40px;border-radius:15px;text-align:center;margin-bottom:50px;border:4px solid var(--violet);box-shadow:0 0 30px rgba(157,0,255,.4)}
-        .gm-section h3{font-size:3rem;color:var(--violet);margin-bottom:20px}
-        .gm-section p{font-size:1.4rem}
+        .gm-section{
+            background:var(--darkgray);
+            padding:40px;
+            border-radius:15px;
+            text-align:center;
+            margin-bottom:50px;
+            border:4px solid var(--green);
+            box-shadow:0 0 30px rgba(0,204,0,.4);
+        }
+        .gm-section h3{
+            font-size:3rem;
+            color:var(--green);
+            margin-bottom:20px;
+        }
 
-        .roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px}
-        .superstar{background:var(--gray);border-radius:15px;overflow:hidden;transition:.4s;box-shadow:0 10px 30px rgba(0,0,0,.5);border:3px solid var(--violet)}
-        .superstar:hover{transform:translateY(-15px);box-shadow:0 20px 50px rgba(157,0,255,.7);border-color:var(--white)}
-        .superstar img{width:100%;height:400px;object-fit:cover}
-        .info{padding:25px;text-align:center}
-        .info h3{font-family:'Bebas Neue';font-size:2.8rem;color:var(--violet);margin-bottom:10px}
-        .info p{font-size:1.2rem;color:#ccc}
+        .roster-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+            gap:25px;
+        }
+        .superstar{
+            background:var(--gray);
+            border-radius:15px;
+            overflow:hidden;
+            transition:.4s;
+            border:3px solid var(--green);
+        }
+        .superstar:hover{
+            transform:translateY(-15px);
+            box-shadow:0 20px 50px rgba(0,204,0,.7);
+            border-color:var(--white);
+        }
+        .superstar img{
+            width:100%;
+            height:400px;
+            object-fit:cover;
+        }
+        .info{
+            padding:25px;
+            text-align:center;
+        }
+        .info h3{
+            font-family:'Bebas Neue';
+            font-size:2.3rem;
+            color:var(--green);
+            margin-bottom:10px;
+        }
 
-        .back-btn{display:block;width:320px;margin:60px auto;padding:18px;background:var(--violet);color:var(--white);text-align:center;border-radius:50px;font-size:1.6rem;border:3px solid var(--white);text-decoration:none;transition:.3s}
-        .back-btn:hover{background:var(--white);color:var(--violet)}
+        .back-btn{
+            display:block;
+            width:320px;
+            margin:60px auto;
+            padding:18px;
+            background:var(--green);
+            color:var(--black);
+            text-align:center;
+            border-radius:50px;
+            font-size:1.6rem;
+            text-decoration:none;
+            border:3px solid var(--white);
+        }
+        .back-btn:hover{
+            background:var(--white);
+            color:var(--black);
+        }
 
-        footer{background:var(--darkgray);text-align:center;padding:40px;color:#888}
+        footer{
+            background:var(--darkgray);
+            text-align:center;
+            padding:50px 20px;
+            color:#888;
+        }
     </style>
 </head>
 <body>
-
 <header>
     <div class="container header-inner">
         <div class="logo">
-            <h1>FuB ECW</h1>
+            <h1>FuB AAA</h1>
         </div>
         <nav>
             <a href="#roster">Roster</a>
-            <a href="ECWNews.html">News</a>
         </nav>
     </div>
 </header>
 
 <div class="hero">
-    <h2>EXTREME RULES</h2>
-    <p>HARDCORE WRESTLING – NO RULES, NO MERCY</p>
-    <a href="#roster" class="cta-btn">ZUM ROSTER</a>
+    <div>
+        <h2>AAA</h2>
+        <p>LUCHA LIBRE AAA WORLDWIDE</p>
+        <a href="#roster" class="cta-btn">ZUM ROSTER</a>
+    </div>
 </div>
 
 <div class="container section">
     <div class="gm-section">
         <h3>General Manager</h3>
-        <p><strong>Xander Parker</strong></p>
+        <p><strong>The Undertaker</strong></p>
     </div>
 </div>
 
 <div class="container section" id="roster">
-    <h2>ECW ROSTER</h2>
+    <h2>AAA Roster</h2>
     <div class="roster-grid">
-        <div class="superstar"><img src="BrockLesnar.png" alt="Brock Lesnar"><div class="info"><h3>BROCK LESNAR</h3><p>The Beast</p></div></div>
-        <div class="superstar"><img src="DrewMcIntyre.png" alt="Drew McIntyre"><div class="info"><h3>DREW MCINTYRE</h3><p>Scottish Warrior</p></div></div>
-        <div class="superstar"><img src="BraunStrowmann.png" alt="Braun Strowmann"><div class="info"><h3>BRAUN STROWMANN</h3><p>Monster Among Men</p></div></div>
-        <div class="superstar"><img src="RandyOrton.png" alt="Randy Orton"><div class="info"><h3>RANDY ORTON</h3><p>The Viper</p></div></div>
-        <div class="superstar"><img src="CodyRhodes.png" alt="Cody Rhodes"><div class="info"><h3>CODY RHODES</h3><p>American Nightmare</p></div></div>
-        <div class="superstar"><img src="ReyMysterio.png" alt="Rey Mysterio"><div class="info"><h3>REY MYSTERIO</h3><p>Ultimate Underdog</p></div></div>
-        <div class="superstar"><img src="Sheamus.png" alt="Sheamus"><div class="info"><h3>SHEAMUS</h3><p>The Celtic Warrior</p></div></div>
-        <div class="superstar"><img src="AustinTheory.png" alt="Austin Theory"><div class="info"><h3>AUSTIN THEORY</h3><p>The Now</p></div></div>
-        <div class="superstar"><img src="IljaDragunov.png" alt="Ilja Dragunov"><div class="info"><h3>ILJA DRAGUNOV</h3><p>Unbesiegbar</p></div></div>
-        <div class="superstar"><img src="BAYLEY.png" alt="Bayley"><div class="info"><h3>BAYLEY</h3><p>Role Model</p></div></div>
-        <div class="superstar"><img src="AlbaFyre.png" alt="Alba Fyre"><div class="info"><h3>ALBA FYRE</h3><p>Fire Keeper</p></div></div>
-        <div class="superstar"><img src="LudwigKaiser.png" alt="Ludwig Kaiser"><div class="info"><h3>LUDWIG KAISER</h3><p>Impera-Tor</p></div></div>
-        <div class="superstar"><img src="TheDreamFinlay.png" alt="The Dream Finlay"><div class="info"><h3>"THE DREAM" FINLAY</h3><p>Zauberhaft</p></div></div>
-        <div class="superstar"><img src="DominikMysterio.png" alt="Dominik Mysterio"><div class="info"><h3>DOMINIK MYSTERIO</h3><p>Dirty Dom</p></div></div>
-        <div class="superstar"><img src="TheAssasin.png" alt="The Assasin"><div class="info"><h3>THE ASSASIN</h3><p>Killed The Undertaker</p></div></div>
-        <div class="superstar"><img src="TheOutsider.png" alt="The Outsider"><div class="info"><h3>THE OUTSIDER</h3><p>Banned from Home</p></div></div>
-        <div class="superstar"><img src="CaseyParker.png" alt="Casey Parker"><div class="info"><h3>CASEY PARKER</h3><p>Kicks</p></div></div>
-        <div class="superstar"><img src="GreenTheAnarchist.png" alt="Green The Anarchist"><div class="info"><h3>"GREEN" THE ANARCHIST</h3><p>Never Gives Up</p></div></div>
-        <div class="superstar"><img src="AnthonyHudson.png" alt="Anthony Hudson"><div class="info"><h3>ANTHONY HUDSON</h3><p>Die Matte ist heilig</p></div></div>
-        <div class="superstar"><img src="TheDarkHorse.png" alt="The Dark Horse"><div class="info"><h3>THE DARK HORSE</h3><p>Hated</p></div></div>
-        <div class="superstar"><img src="HalieHunter.png" alt="Halie Hunter"><div class="info"><h3>HALIE HUNTER</h3><p>Nobody</p></div></div>
-        <div class="superstar"><img src="JuliaTheDevil.png" alt="Julia The Devil"><div class="info"><h3>JULIA "THE DEVIL"</h3><p>Queen of Darkness</p></div></div>
+        <div class="superstar"><img src="AJStyles.png" alt="AJ Styles"><div class="info"><h3>AJ STYLES</h3><p>The Phenomenal One</p></div></div>
+        <div class="superstar"><img src="AkiraTozawa.png" alt="Akira Tozawa"><div class="info"><h3>AKIRA TOZAWA</h3><p></p></div></div>
+        <div class="superstar"><img src="Amelia.png" alt="Amelia"><div class="info"><h3>AMELIA</h3><p></p></div></div>
+        <div class="superstar"><img src="Asuka.png" alt="Asuka"><div class="info"><h3>ASUKA</h3><p>The Empress</p></div></div>
+        <div class="superstar"><img src="Axiom.png" alt="Axiom"><div class="info"><h3>AXIOM</h3><p></p></div></div>
+        <div class="superstar"><img src="Bayley.png" alt="Bayley"><div class="info"><h3>BAYLEY</h3><p>The Role Model</p></div></div>
+        <div class="superstar"><img src="BrooksJensen.png" alt="Brooks Jensen"><div class="info"><h3>BROOKS JENSEN</h3><p></p></div></div>
+        <div class="superstar"><img src="CandiceLeRae.png" alt="Candice LeRae"><div class="info"><h3>CANDICE LERAE</h3><p></p></div></div>
+        <div class="superstar"><img src="CarmeloHayes.png" alt="Carmelo Hayes"><div class="info"><h3>CARMELO HAYES</h3><p>Him</p></div></div>
+        <div class="superstar"><img src="ChadGable.png" alt="Chad Gable"><div class="info"><h3>CHAD GABLE</h3><p>The American Made</p></div></div>
+        <div class="superstar"><img src="DanielDiaz.png" alt="Daniel Diáz"><div class="info"><h3>DANIEL DIÁZ</h3><p></p></div></div>
+        <div class="superstar"><img src="DavidKing.png" alt="David King"><div class="info"><h3>DAVID KING</h3><p></p></div></div>
+        <div class="superstar"><img src="DominikMysterio.png" alt="Dominik Mysterio"><div class="info"><h3>DOMINIK MYSTERIO</h3><p></p></div></div>
+        <div class="superstar"><img src="DragonLee.png" alt="Dragon Lee"><div class="info"><h3>DRAGON LEE</h3><p></p></div></div>
+        <div class="superstar"><img src="ElGrandeAmericano.png" alt="El Grande Americano"><div class="info"><h3>EL GRANDE AMERICANO</h3><p></p></div></div>
+        <div class="superstar"><img src="GoldenReign.png" alt="Golden Reign"><div class="info"><h3>GOLDEN REIGN</h3><p></p></div></div>
+        <div class="superstar"><img src="Jade.png" alt="Jade"><div class="info"><h3>JADE</h3><p></p></div></div>
+        <div class="superstar"><img src="JaidaParker.png" alt="Jaida Parker"><div class="info"><h3>JAIDA PARKER</h3><p></p></div></div>
+        <div class="superstar"><img src="JeVonEvans.png" alt="Je'Von Evans"><div class="info"><h3>JE'VON EVANS</h3><p></p></div></div>
+        <div class="superstar"><img src="Madison.png" alt="Madison"><div class="info"><h3>MADISON</h3><p></p></div></div>
+        <div class="superstar"><img src="MorganParker.png" alt="Morgan Parker"><div class="info"><h3>MORGAN PARKER</h3><p></p></div></div>
+        <div class="superstar"><img src="PsychoFox.png" alt="PsychoFox"><div class="info"><h3>PSYCHOFox</h3><p></p></div></div>
+        <div class="superstar"><img src="ReyFenix.png" alt="Rey Fenix"><div class="info"><h3>REY FENIX</h3><p>Zero Miedo</p></div></div>
+        <div class="superstar"><img src="ReyMysterio.png" alt="Rey Mysterio"><div class="info"><h3>REY MYSTERIO</h3><p>The Ultimate Underdog</p></div></div>
+        <div class="superstar"><img src="RickySains.png" alt="Ricky Sains"><div class="info"><h3>RICKY SAINS</h3><p></p></div></div>
+        <div class="superstar"><img src="Scarlett.png" alt="Scarlett"><div class="info"><h3>SCARLETT</h3><p></p></div></div>
+        <div class="superstar"><img src="Vale.png" alt="Vale"><div class="info"><h3>VALE</h3><p></p></div></div>
+        <div class="superstar"><img src="Slater.png" alt="Slater"><div class="info"><h3>SLATER</h3><p></p></div></div>
+        <div class="superstar"><img src="Simmons.png" alt="Simmons"><div class="info"><h3>SIMMONS</h3><p></p></div></div>
+        <div class="superstar"><img src="Starman.png" alt="Starman"><div class="info"><h3>STARMAN</h3><p></p></div></div>
     </div>
 </div>
 
-<a href="wrestling.html" class="back-btn">Zurück zur FuB Wrestling Übersicht</a>
+<a href="wrestling.html" class="back-btn">← Zurück zur FuB Wrestling Übersicht</a>
 
 <footer>
-    © 2025 Ficken Und Bahn – FuB ECW | Hardcore Wrestling at its finest
+    © 2025 Ficken Und Bahn – FuB AAA | Lucha Libre AAA Worldwide
 </footer>
-
 </body>
 </html>
