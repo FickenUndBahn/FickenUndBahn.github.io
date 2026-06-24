@@ -6,30 +6,31 @@
     <title>FuB SmackDown – The Blue Brand</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root{--blue:#005BBB;--lightblue:#0099ff;--silver:#C0C0C0;--black:#000;--gray:#1a1a1a}
+        :root{
+            --blue:#005BBB;
+            --lightblue:#0099ff;
+            --silver:#C0C0C0;
+            --black:#000;
+            --gray:#1a1a1a
+        }
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Roboto',sans-serif;background:var(--black);color:#fff}
         .container{max-width:1300px;margin:0 auto;padding:20px}
-
         header{background:var(--blue);padding:20px 0;box-shadow:0 8px 30px rgba(0,91,187,.6)}
         .header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
         .logo h1{font-family:'Bebas Neue';font-size:4.5rem;color:#fff;letter-spacing:6px;text-shadow:0 0 20px var(--silver)}
         nav a{color:#fff;font-weight:bold;font-size:1.2rem;margin:0 15px;padding:10px 20px;border:2px solid var(--silver);border-radius:8px;text-decoration:none;transition:.3s}
         nav a:hover{background:var(--silver);color:var(--black)}
-
         .hero{height:90vh;background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),url('https://via.placeholder.com/1920x1080/005BBB/fff?text=SMACKDOWN+HERO') center/cover;display:flex;align-items:center;justify-content:center;text-align:center}
         .hero h2{font-family:'Bebas Neue';font-size:7rem;color:var(--blue);text-shadow:0 0 40px #000}
         .hero p{font-size:2rem;margin:20px 0}
         .cta-btn{display:inline-block;padding:18px 50px;background:var(--blue);color:#fff;font-size:1.8rem;border-radius:50px;text-decoration:none;margin:15px;transition:.4s}
         .cta-btn:hover{background:#fff;color:var(--blue);transform:scale(1.1)}
-
         .section{padding:70px 0}
         h2{font-family:'Bebas Neue';font-size:4.5rem;text-align:center;margin-bottom:50px;color:var(--blue)}
-
         .gm-section{background:var(--gray);padding:40px;border-radius:15px;text-align:center;margin-bottom:50px;border:4px solid var(--blue);box-shadow:0 0 30px rgba(0,91,187,.4)}
         .gm-section h3{font-size:3rem;color:var(--blue);margin-bottom:20px}
         .gm-section p{font-size:1.4rem}
-
         .roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px}
         .superstar{background:var(--gray);border-radius:15px;overflow:hidden;transition:.4s;box-shadow:0 10px 30px rgba(0,0,0,.5);border:3px solid var(--blue)}
         .superstar:hover{transform:translateY(-15px);box-shadow:0 20px 50px rgba(0,91,187,.7);border-color:var(--lightblue)}
@@ -37,15 +38,12 @@
         .info{padding:25px;text-align:center}
         .info h3{font-family:'Bebas Neue';font-size:2.8rem;color:var(--blue);margin-bottom:10px}
         .info p{font-size:1.2rem;color:var(--silver)}
-
         .back-btn{display:block;width:320px;margin:60px auto;padding:18px;background:var(--blue);color:#fff;text-align:center;border-radius:50px;font-size:1.6rem;border:3px solid var(--silver);text-decoration:none;transition:.3s}
         .back-btn:hover{background:var(--silver);color:var(--black)}
-
         footer{background:var(--gray);text-align:center;padding:40px;color:#888}
     </style>
 </head>
 <body>
-
 <header>
     <div class="container header-inner">
         <div class="logo">
@@ -67,149 +65,54 @@
 <div class="container section">
     <div class="gm-section">
         <h3>General Manager</h3>
-        <p><strong>Marco</strong></p>
+        <p><strong>Nick Aldis</strong></p>
     </div>
 </div>
 
 <div class="container section" id="roster">
     <h2>SmackDown Roster</h2>
     <div class="roster-grid">
-        <div class="superstar"><img src="GUNTHER.png" alt="GUNTHER"><div class="info"><h3>GUNTHER</h3><p>The Ring General</p></div></div>
-        <div class="superstar"><img src="BigE.png" alt="Big E"><div class="info"><h3>BIG E</h3><p>Powerhouse</p></div></div>
-        <div class="superstar"><img src="SamiZayn.png" alt="Sami Zayn"><div class="info"><h3>SAMI ZAYN</h3><p>Honorary Uce</p></div></div>
+        <div class="superstar"><img src="AlbaFyre.png" alt="Alba Fyre"><div class="info"><h3>ALBA FYRE</h3><p>The Scottish Psychopath</p></div></div>
+        <div class="superstar"><img src="AlexShelley.png" alt="Alex Shelley"><div class="info"><h3>ALEX SHELLEY</h3><p>The Technical Wizard</p></div></div>
+        <div class="superstar"><img src="AlexaBliss.png" alt="Alexa Bliss"><div class="info"><h3>ALEXA BLISS</h3><p>The Goddess</p></div></div>
+        <div class="superstar"><img src="Angel.png" alt="Angel"><div class="info"><h3>ANGEL</h3><p></p></div></div>
+        <div class="superstar"><img src="BFab.png" alt="B-Fab"><div class="info"><h3>B-FAB</h3><p>The Enforcer</p></div></div>
+        <div class="superstar"><img src="Berto.png" alt="Berto"><div class="info"><h3>BERTO</h3><p></p></div></div>
+        <div class="superstar"><img src="BiancaBelair.png" alt="Bianca Belair"><div class="info"><h3>BIANCA BELAIR</h3><p>The EST</p></div></div>
+        <div class="superstar"><img src="ChelseaGreen.png" alt="Chelsea Green"><div class="info"><h3>CHELSEA GREEN</h3><p>The Hot Mess</p></div></div>
+        <div class="superstar"><img src="ChrisSabin.png" alt="Chris Sabin"><div class="info"><h3>CHRIS SABIN</h3><p>The Motor City Machine</p></div></div>
+        <div class="superstar"><img src="CodyRhodes.png" alt="Cody Rhodes"><div class="info"><h3>CODY RHODES</h3><p>The American Nightmare</p></div></div>
+        <div class="superstar"><img src="DamianPriest.png" alt="Damian Priest"><div class="info"><h3>DAMIAN PRIEST</h3><p>The Archer of Infamy</p></div></div>
+        <div class="superstar"><img src="DrewMcIntyre.png" alt="Drew McIntyre"><div class="info"><h3>DREW MCINTYRE</h3><p>The Scottish Warrior</p></div></div>
+        <div class="superstar"><img src="Giulia.png" alt="Giulia"><div class="info"><h3>GIULIA</h3><p>The Beautiful Nightmare</p></div></div>
+        <div class="superstar"><img src="IljaDragunov.png" alt="Ilja Dragunov"><div class="info"><h3>ILJA DRAGUNOV</h3><p>The Mad Dragon</p></div></div>
+        <div class="superstar"><img src="JCMateo.png" alt="JC Mateo"><div class="info"><h3>JC MATEO</h3><p></p></div></div>
+        <div class="superstar"><img src="JadeCargill.png" alt="Jade Cargill"><div class="info"><h3>JADE CARGILL</h3><p>The Storm</p></div></div>
+        <div class="superstar"><img src="JordynneGrace.png" alt="Jordynne Grace"><div class="info"><h3>JORDYNNE GRACE</h3><p>The Juggernaut</p></div></div>
         <div class="superstar"><img src="KevinOwens.png" alt="Kevin Owens"><div class="info"><h3>KEVIN OWENS</h3><p>Prizefighter</p></div></div>
-        <div class="superstar"><img src="CharlotteFlair.png" alt="Charlotte Flair"><div class="info"><h3>CHARLOTTE FLAIR</h3><p>The Queen</p></div></div>
+        <div class="superstar"><img src="KitWilson.png" alt="Kit Wilson"><div class="info"><h3>KIT WILSON</h3><p></p></div></div>
+        <div class="superstar"><img src="LAKnight.png" alt="LA Knight"><div class="info"><h3>LA KNIGHT</h3><p>Yeah!</p></div></div>
+        <div class="superstar"><img src="LashLegend.png" alt="Lash Legend"><div class="info"><h3>LASH LEGEND</h3><p></p></div></div>
+        <div class="superstar"><img src="NiaJax.png" alt="Nia Jax"><div class="info"><h3>NIA JAX</h3><p>The Irresistible Force</p></div></div>
+        <div class="superstar"><img src="PiperNiven.png" alt="Piper Niven"><div class="info"><h3>PIPER NIVEN</h3><p>The Scottish Powerhouse</p></div></div>
+        <div class="superstar"><img src="RomanReigns.png" alt="Roman Reigns"><div class="info"><h3>ROMAN REIGNS</h3><p>The Tribal Chief</p></div></div>
+        <div class="superstar"><img src="SamiZayn.png" alt="Sami Zayn"><div class="info"><h3>SAMI ZAYN</h3><p>The Honorary Uce</p></div></div>
         <div class="superstar"><img src="ShinsukeNakamura.png" alt="Shinsuke Nakamura"><div class="info"><h3>SHINSUKE NAKAMURA</h3><p>King of Strong Style</p></div></div>
-        <div class="superstar"><img src="CarmeloHayes.png" alt="Carmelo Hayes"><div class="info"><h3>CARMELO HAYES</h3><p>Him</p></div></div>
-        <div class="superstar"><img src="MontezFord.png" alt="Montez Ford"><div class="info"><h3>MONTEZ FORD</h3><p>High Flyer</p></div></div>
-        <div class="superstar"><img src="IyoSky.png" alt="Iyo Sky"><div class="info"><h3>IYO SKY</h3><p>Genius of the Sky</p></div></div>
-        <div class="superstar"><img src="BUTCH.png" alt="BUTCH"><div class="info"><h3>BUTCH</h3><p>The Bruiserweight</p></div></div>
-        <div class="superstar"><img src="TheLegendKiller.png" alt="The Legend Killer"><div class="info"><h3>THE LEGEND KILLER</h3><p>—</p></div></div>
-        <div class="superstar"><img src="Scarlett.png" alt="Scarlett"><div class="info"><h3>SCARLETT</h3><p>Dark Witch</p></div></div>
-        <div class="superstar"><img src="UncleHowdy.png" alt="Uncle Howdy"><div class="info"><h3>UNCLE HOWDY</h3><p>—</p></div></div>
-        <div class="superstar"><img src="GigiDolin.png" alt="Gigi Dolin"><div class="info"><h3>GIGI DOLIN</h3><p>Toxic Attraction</p></div></div>
-        <div class="superstar"><img src="TheNecromancer.png" alt="The Necromancer"><div class="info"><h3>THE NECROMANCER</h3><p>—</p></div></div>
-        <div class="superstar"><img src="MICHIN.png" alt="MICHIN"><div class="info"><h3>MICHIN</h3><p>—</p></div></div>
-        <div class="superstar"><img src="KennyParker.png" alt="Kenny Parker"><div class="info"><h3>KENNY PARKER</h3><p>—</p></div></div>
-        <div class="superstar"><img src="TheLunaticParker.png" alt="The Lunatic Parker"><div class="info"><h3>THE LUNATIC PARKER</h3><p>—</p></div></div>
-        <div class="superstar"><img src="Nicole.png" alt="Nicole"><div class="info"><h3>NICOLE</h3><p>—</p></div></div>
-        <div class="superstar"><img src="TheNightmare.png" alt="The Nightmare"><div class="info"><h3>THE NIGHTMARE</h3><p>—</p></div></div>
-        <div class="superstar"><img src="ZackReese.png" alt="Zack Reese"><div class="info"><h3>ZACK REESE</h3><p>—</p></div></div>
+        <div class="superstar"><img src="SoloSikoa.png" alt="Solo Sikoa"><div class="info"><h3>SOLO SIKOA</h3><p>The Enforcer</p></div></div>
+        <div class="superstar"><img src="TallaTonga.png" alt="Talla Tonga"><div class="info"><h3>TALLA TONGA</h3><p></p></div></div>
+        <div class="superstar"><img src="TamaTonga.png" alt="Tama Tonga"><div class="info"><h3>TAMA TONGA</h3><p>The Good Bad Guy</p></div></div>
+        <div class="superstar"><img src="TheMiz.png" alt="The Miz"><div class="info"><h3>THE MIZ</h3><p>The A-Lister</p></div></div>
+        <div class="superstar"><img src="TheesTheAnarchist.png" alt="Thees The Anarchist"><div class="info"><h3>THEES "THE ANARCHIST"</h3><p></p></div></div>
+        <div class="superstar"><img src="TiffanyStratton.png" alt="Tiffany Stratton"><div class="info"><h3>TIFFANY STRATTON</h3><p>The Center of the Universe</p></div></div>
+        <div class="superstar"><img src="TongaLoga.png" alt="Tonga Loga"><div class="info"><h3>TONGA LOGA</h3><p></p></div></div>
+        <div class="superstar"><img src="ZelinaVega.png" alt="Zelina Vega"><div class="info"><h3>ZELINA VEGA</h3><p>The Queen of Lucha</p></div></div>
     </div>
 </div>
 
-<a href="wrestling.html" class="back-btn">Zurück zur FuB Wrestling Übersicht</a>
+<a href="wrestling.html" class="back-btn">← Zurück zur FuB Wrestling Übersicht</a>
 
 <footer>
     © 2025 Ficken Und Bahn – FuB SmackDown | Alle Rechte vorbehalten
 </footer>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FuB SmackDown – The Blue Brand</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root{--blue:#005BBB;--lightblue:#0099ff;--silver:#C0C0C0;--black:#000;--gray:#1a1a1a}
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Roboto',sans-serif;background:var(--black);color:#fff}
-        .container{max-width:1300px;margin:0 auto;padding:20px}
-
-        header{background:var(--blue);padding:20px 0;box-shadow:0 8px 30px rgba(0,91,187,.6)}
-        .header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-        .logo h1{font-family:'Bebas Neue';font-size:4.5rem;color:#fff;letter-spacing:6px;text-shadow:0 0 20px var(--silver)}
-        nav a{color:#fff;font-weight:bold;font-size:1.2rem;margin:0 15px;padding:10px 20px;border:2px solid var(--silver);border-radius:8px;text-decoration:none;transition:.3s}
-        nav a:hover{background:var(--silver);color:var(--black)}
-
-        .hero{height:90vh;background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),url('https://via.placeholder.com/1920x1080/005BBB/fff?text=SMACKDOWN+HERO') center/cover;display:flex;align-items:center;justify-content:center;text-align:center}
-        .hero h2{font-family:'Bebas Neue';font-size:7rem;color:var(--blue);text-shadow:0 0 40px #000}
-        .hero p{font-size:2rem;margin:20px 0}
-        .cta-btn{display:inline-block;padding:18px 50px;background:var(--blue);color:#fff;font-size:1.8rem;border-radius:50px;text-decoration:none;margin:15px;transition:.4s}
-        .cta-btn:hover{background:#fff;color:var(--blue);transform:scale(1.1)}
-
-        .section{padding:70px 0}
-        h2{font-family:'Bebas Neue';font-size:4.5rem;text-align:center;margin-bottom:50px;color:var(--blue)}
-
-        .gm-section{background:var(--gray);padding:40px;border-radius:15px;text-align:center;margin-bottom:50px;border:4px solid var(--blue);box-shadow:0 0 30px rgba(0,91,187,.4)}
-        .gm-section h3{font-size:3rem;color:var(--blue);margin-bottom:20px}
-        .gm-section p{font-size:1.4rem}
-
-        .roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px}
-        .superstar{background:var(--gray);border-radius:15px;overflow:hidden;transition:.4s;box-shadow:0 10px 30px rgba(0,0,0,.5);border:3px solid var(--blue)}
-        .superstar:hover{transform:translateY(-15px);box-shadow:0 20px 50px rgba(0,91,187,.7);border-color:var(--lightblue)}
-        .superstar img{width:100%;height:400px;object-fit:cover}
-        .info{padding:25px;text-align:center}
-        .info h3{font-family:'Bebas Neue';font-size:2.8rem;color:var(--blue);margin-bottom:10px}
-        .info p{font-size:1.2rem;color:var(--silver)}
-
-        .back-btn{display:block;width:320px;margin:60px auto;padding:18px;background:var(--blue);color:#fff;text-align:center;border-radius:50px;font-size:1.6rem;border:3px solid var(--silver);text-decoration:none;transition:.3s}
-        .back-btn:hover{background:var(--silver);color:var(--black)}
-
-        footer{background:var(--gray);text-align:center;padding:40px;color:#888}
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="container header-inner">
-        <div class="logo">
-            <h1>FuB SmackDown</h1>
-        </div>
-        <nav>
-            <a href="#roster">Roster</a>
-            <a href="SmackDownNews.html">News</a>
-        </nav>
-    </div>
-</header>
-
-<div class="hero">
-    <h2>SMACKDOWN</h2>
-    <p>FREITAG NACHT GEHÖRT DEN BESTEN</p>
-    <a href="#roster" class="cta-btn">ZUM ROSTER</a>
-</div>
-
-<div class="container section">
-    <div class="gm-section">
-        <h3>General Manager</h3>
-        <p><strong>Marco</strong></p>
-    </div>
-</div>
-
-<div class="container section" id="roster">
-    <h2>SmackDown Roster</h2>
-    <div class="roster-grid">
-        <div class="superstar"><img src="GUNTHER.png" alt="GUNTHER"><div class="info"><h3>GUNTHER</h3><p>The Ring General</p></div></div>
-        <div class="superstar"><img src="BigE.png" alt="Big E"><div class="info"><h3>BIG E</h3><p>Powerhouse</p></div></div>
-        <div class="superstar"><img src="SamiZayn.png" alt="Sami Zayn"><div class="info"><h3>SAMI ZAYN</h3><p>Honorary Uce</p></div></div>
-        <div class="superstar"><img src="KevinOwens.png" alt="Kevin Owens"><div class="info"><h3>KEVIN OWENS</h3><p>Prizefighter</p></div></div>
-        <div class="superstar"><img src="CharlotteFlair.png" alt="Charlotte Flair"><div class="info"><h3>CHARLOTTE FLAIR</h3><p>The Queen</p></div></div>
-        <div class="superstar"><img src="ShinsukeNakamura.png" alt="Shinsuke Nakamura"><div class="info"><h3>SHINSUKE NAKAMURA</h3><p>King of Strong Style</p></div></div>
-        <div class="superstar"><img src="CarmeloHayes.png" alt="Carmelo Hayes"><div class="info"><h3>CARMELO HAYES</h3><p>Him</p></div></div>
-        <div class="superstar"><img src="MontezFord.png" alt="Montez Ford"><div class="info"><h3>MONTEZ FORD</h3><p>High Flyer</p></div></div>
-        <div class="superstar"><img src="IyoSky.png" alt="Iyo Sky"><div class="info"><h3>IYO SKY</h3><p>Genius of the Sky</p></div></div>
-        <div class="superstar"><img src="BUTCH.png" alt="BUTCH"><div class="info"><h3>BUTCH</h3><p>The Bruiserweight</p></div></div>
-        <div class="superstar"><img src="TheLegendKiller.png" alt="The Legend Killer"><div class="info"><h3>THE LEGEND KILLER</h3><p>—</p></div></div>
-        <div class="superstar"><img src="Scarlett.png" alt="Scarlett"><div class="info"><h3>SCARLETT</h3><p>Dark Witch</p></div></div>
-        <div class="superstar"><img src="UncleHowdy.png" alt="Uncle Howdy"><div class="info"><h3>UNCLE HOWDY</h3><p>—</p></div></div>
-        <div class="superstar"><img src="GigiDolin.png" alt="Gigi Dolin"><div class="info"><h3>GIGI DOLIN</h3><p>Toxic Attraction</p></div></div>
-        <div class="superstar"><img src="TheNecromancer.png" alt="The Necromancer"><div class="info"><h3>THE NECROMANCER</h3><p>—</p></div></div>
-        <div class="superstar"><img src="MICHIN.png" alt="MICHIN"><div class="info"><h3>MICHIN</h3><p>—</p></div></div>
-        <div class="superstar"><img src="KennyParker.png" alt="Kenny Parker"><div class="info"><h3>KENNY PARKER</h3><p>—</p></div></div>
-        <div class="superstar"><img src="TheLunaticParker.png" alt="The Lunatic Parker"><div class="info"><h3>THE LUNATIC PARKER</h3><p>—</p></div></div>
-        <div class="superstar"><img src="Nicole.png" alt="Nicole"><div class="info"><h3>NICOLE</h3><p>—</p></div></div>
-        <div class="superstar"><img src="TheNightmare.png" alt="The Nightmare"><div class="info"><h3>THE NIGHTMARE</h3><p>—</p></div></div>
-        <div class="superstar"><img src="ZackReese.png" alt="Zack Reese"><div class="info"><h3>ZACK REESE</h3><p>—</p></div></div>
-    </div>
-</div>
-
-<a href="wrestling.html" class="back-btn">Zurück zur FuB Wrestling Übersicht</a>
-
-<footer>
-    © 2025 Ficken Und Bahn – FuB SmackDown | Alle Rechte vorbehalten
-</footer>
-
 </body>
 </html>

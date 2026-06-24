@@ -11,9 +11,8 @@
             --sd: #0066ff;
             --aaa: #00cc00;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+       
         body {
             font-family: 'Arial', sans-serif;
             background: #0a0a0a;
@@ -123,6 +122,54 @@
             transform: scale(1.05);
         }
 
+        /* === ACCORDION STYLES === */
+        .accordion {
+            max-width: 900px;
+            margin: 40px auto 20px;
+        }
+
+        .accordion-item {
+            margin-bottom: 12px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            width: 100%;
+            padding: 18px 25px;
+            background: #222;
+            color: #fff;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.7rem;
+            text-align: left;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .accordion-header:hover {
+            background: #ff0000;
+        }
+
+        .accordion-content {
+            padding: 0 25px;
+            background: #1a1a1a;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+
+        .accordion-content p {
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+            margin: 0;
+        }
+
+        .accordion-content p:last-child {
+            border-bottom: none;
+        }
+
         .back-btn {
             display: inline-block;
             margin: 30px auto;
@@ -155,35 +202,78 @@
     </div>
 
     <div class="container">
+        <!-- Show Auswahl -->
         <div class="section">
             <h2>Wähle deine Show</h2>
             <div class="shows-grid">
-                <!-- RAW -->
                 <div class="show-card raw">
                     <h3>RAW</h3>
                     <p>Die rote Flaggschiff-Show – Montags live!</p>
                     <a href="FuBRAW.html">Zu RAW</a>
                 </div>
-
-                <!-- NXT -->
                 <div class="show-card nxt">
                     <h3>NXT</h3>
                     <p>Die Zukunft des Wrestlings – jung, wild, unbesiegbar!</p>
                     <a href="FuBNXT.html">Zu NXT</a>
                 </div>
-
-                <!-- SmackDown -->
                 <div class="show-card smackdown">
                     <h3>SmackDown</h3>
                     <p>Die blaue Kampfmaschine – Freitags auf Hochtouren!</p>
                     <a href="FuBSmackDown.html">Zu SmackDown</a>
                 </div>
-
-                <!-- AAA -->
                 <div class="show-card aaa">
                     <h3>AAA</h3>
                     <p>Lucha Libre AAA Worldwide – Hochfliegend, explosiv & mexikanisch!</p>
                     <a href="AAA.html">Zu AAA</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- === TITEL BEREICH === -->
+        <div class="section">
+            <h2>Aktuelle Titel</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">NXT Titel</button>
+                    <div class="accordion-content">
+                        <p><strong>NXT Championship:</strong> Joe Hendry seit 9. Juni 2026</p>
+                        <p><strong>NXT Women's Championship:</strong> Karmen Petrovic seit 12. April 2026</p>
+                        <p><strong>NXT North American Championship:</strong> Finch Rusell seit 9. Juni 2026</p>
+                        <p><strong>NXT Women's North American Championship:</strong> Izzi Dame seit 16. März 2026</p>
+                        <p><strong>NXT Tag Team Championship:</strong> Andre Chase & Charlie Dempsey</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">RAW Titel</button>
+                    <div class="accordion-content">
+                        <p><strong>World Heavyweight Championship:</strong> Penta seit 16. Mai 2026</p>
+                        <p><strong>Women's World Championship:</strong> Stephanie Vaquer seit 16. März 2026</p>
+                        <p><strong>Intercontinental Championship:</strong> Rey Mysterio seit 18. April 2026</p>
+                        <p><strong>Women's Intercontinental Championship:</strong> Becky Lynch seit 16. März 2026</p>
+                        <p><strong>World Tag Team Championship:</strong> The New Day seit 8. Juni 2026</p>
+                        <p><strong>Women's Tag Team Championship:</strong> RHIYO seit 16. März 2026</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">SmackDown Titel</button>
+                    <div class="accordion-content">
+                        <p><strong>Undisputed WWE Championship:</strong> Shinsuke Nakamura seit 28. März 2026</p>
+                        <p><strong>Tag Team Championship:</strong> Dexter Lumis & Joe Gacy seit 16. März 2026</p>
+                        <p><strong>Women's Championship:</strong> Jade Cargill seit 16. März 2026</p>
+                        <p><strong>United States Championship:</strong> Edge seit 19. Juni 2026</p>
+                        <p><strong>Women's United States Championship:</strong> Giulia seit 16. März 2026</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">AAA Titel</button>
+                    <div class="accordion-content">
+                        <p><strong>AAA Latin America Championship:</strong> Rey Fenix seit 4. Juni 2026</p>
+                        <p><strong>AAA Mega Championship:</strong> Calavera seit 1. Juni 2026</p>
+                        <p><strong>AAA World Mixed Tag Team Championship:</strong> Kabuki Warriors seit 1. Juni 2026</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -197,5 +287,25 @@
         © 2025 Ficken Und Bahn Wrestling | Alle Rechte vorbehalten<br>
         Fan-Projekt • Nicht offiziell mit WWE oder AAA verbunden
     </footer>
+
+    <!-- JavaScript für das Ausklappen -->
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                
+                // Schließe alle anderen
+                document.querySelectorAll('.accordion-content').forEach(item => {
+                    if (item !== content) item.style.maxHeight = null;
+                });
+
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
